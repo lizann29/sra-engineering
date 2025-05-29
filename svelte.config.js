@@ -1,14 +1,17 @@
 import adapter from '@sveltejs/adapter-static';
 
-/** @type {imdwqdport('@sveltejs/kit').Config} */
+const dev = process.argv.includes('dev');
+
+/** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
 		adapter: adapter({
 			fallback: '404.html'
-		})
-	},
+		}),
+		paths: {
+			base: dev ? '' : '/sra-engineering'
+		}
+	}
 };
-
-config.paths = { base: process.argv.includes('dev') ? '' : "/sra-engineering" }
 
 export default config;

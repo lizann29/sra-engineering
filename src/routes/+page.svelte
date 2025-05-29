@@ -6,4 +6,4 @@
 </script>
 
 <a href="{base}/"> home</a>
-<a href="{base}/about">go about</a>
+<a href="{base}/about">go about ტ</a>

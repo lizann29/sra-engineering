@@ -111,7 +111,7 @@
                         <div class="relative group">
                             <div class="absolute -inset-1 bg-gradient-to-r from-red-500 to-blue-500 rounded-lg blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
                             <div class="relative p-1 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-                                <img src="{base}/logo.png" alt="SRA Engineering Logo"
+                                <img src="{base}/images/logo.png" alt="SRA Engineering Logo"
                                      class="h-16 md:h-20 transform transition-all duration-500 hover:scale-105 filter brightness-110" />
                             </div>
                         </div>

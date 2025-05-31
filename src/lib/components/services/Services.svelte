@@ -1,16 +1,15 @@
-<!-- ServicesEnglish.svelte - Professional Modern Design -->
 <script>
     import { onMount } from 'svelte';
     import { fade, fly } from 'svelte/transition';
+    import { base } from '$app/paths';
 
-    // სერვისების მონაცემები
     const services = [
         {
             id: 'plumbing',
             title: 'Plumbing System Installations',
             shortTitle: 'Plumbing Systems',
             description: 'We design and install reliable plumbing systems for residential, commercial, and industrial buildings, ensuring optimal water distribution and waste management.',
-            image: '/images/plumbing.jpg',
+            image: `${base}/images/plumbing.jpg`,
             category: 'Infrastructure',
             color: 'blue'
         },
@@ -19,7 +18,7 @@
             title: 'Heating and Cooling System Installations',
             shortTitle: 'Heating & Cooling',
             description: 'Our team provides efficient heating and cooling solutions tailored to your building\'s needs, using modern and energy-saving technologies.',
-            image: '/images/heating.png',
+            image: `${base}/images/heating.png`,
             category: 'Climate Control',
             color: 'red'
         },
@@ -28,7 +27,7 @@
             title: 'Ventilation System Installations',
             shortTitle: 'Ventilation',
             description: 'We implement ventilation systems that ensure clean air circulation, maintaining indoor air quality and comfort in all environments.',
-            image: '/images/vintilation.png',
+            image: `${base}/images/vintilation.png`,
             category: 'Air Quality',
             color: 'blue'
         },
@@ -37,7 +36,7 @@
             title: 'Fire Extinguishing System Installations',
             shortTitle: 'Fire Extinguishing',
             description: 'We install certified fire suppression systems, including sprinklers and extinguishing networks, in compliance with safety regulations and standards.',
-            image: '/images/project4.jpeg',
+            image: `${base}/images/project4.jpeg`,
             category: 'Safety Systems',
             color: 'red'
         },
@@ -46,7 +45,7 @@
             title: 'VRF and Air Conditioning System Installations',
             shortTitle: 'VRF & AC Systems',
             description: 'Our VRF and air conditioning systems offer flexible, energy-efficient climate control for buildings of any size or complexity.',
-            image: '/images/vrfsystem.png',
+            image: `${base}/images/vrfsystem.png`,
             category: 'Climate Control',
             color: 'blue'
         },
@@ -55,7 +54,7 @@
             title: 'Siphonic Rainwater Drainage System Installations',
             shortTitle: 'Rainwater Drainage',
             description: 'We design and install siphonic systems for rapid and efficient rainwater drainage from roofs, minimizing pipework and maximizing flow.',
-            image: '/images/rainwater.png',
+            image: `${base}/images/rainwater.png`,
             category: 'Drainage',
             color: 'blue'
         },
@@ -64,7 +63,7 @@
             title: 'Passive Fire Protection System Installations',
             shortTitle: 'Passive Fire Protection',
             description: 'We apply passive fire stopping solutions to contain fire and smoke, ensuring the integrity of building compartments and compliance with fire codes.',
-            image: '/images/passiveFireProtectionSystem.png',
+            image: `${base}/images/passiveFireProtectionSystem.png`,
             category: 'Safety Systems',
             color: 'red'
         },
@@ -73,7 +72,7 @@
             title: 'Electrical System Installations',
             shortTitle: 'Electrical Systems',
             description: 'We provide comprehensive electrical installations, from lighting and power distribution to smart building integrations, all adhering to international safety standards.',
-            image: '/images/electricalInstallation.png',
+            image: `${base}/images/electricalInstallation.png`,
             category: 'Power Systems',
             color: 'red'
         }
@@ -366,24 +365,6 @@
 
                                 <!-- Bottom Actions -->
                                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 pt-6 border-t border-gray-200">
-<!--                                    <div class="flex gap-4">-->
-<!--                                        <button class="bg-gradient-to-r {-->
-<!--                                            activeService.color === 'red'-->
-<!--                                                ? 'from-red-600 to-red-700 hover:from-red-700 hover:to-red-800'-->
-<!--                                                : 'from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800'-->
-<!--                                        } text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">-->
-<!--                                            Get Quote-->
-<!--                                        </button>-->
-
-<!--                                        <button class="border-2 {-->
-<!--                                            activeService.color === 'red'-->
-<!--                                                ? 'border-red-600 text-red-600 hover:bg-red-50'-->
-<!--                                                : 'border-blue-600 text-blue-600 hover:bg-blue-50'-->
-<!--                                        } font-semibold py-4 px-8 rounded-xl transition-all duration-300 hover:shadow-lg">-->
-<!--                                            Learn More-->
-<!--                                        </button>-->
-<!--                                    </div>-->
-
                                     <!-- Progress Indicators -->
                                     <div class="flex items-center gap-3">
                                         <span class="text-sm text-gray-500 font-medium">

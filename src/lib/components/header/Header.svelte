@@ -75,7 +75,7 @@
             <nav class="hidden lg:flex space-x-8 align-middle content-center items-center">
                 {#each navItems as item}
                     <a
-                            href={item.path}
+                            href="{base}{item.path}"
                             class="text-white hover:text-red-400 transition-all duration-200 font-medium tracking-wide text-sm uppercase border-b-2 border-transparent hover:border-red-400 pb-1"
                     >
                         {item.title}

@@ -1,6 +1,7 @@
 <!-- src/lib/components/AboutUs.svelte -->
 <script lang="ts">
     import { onMount } from 'svelte';
+    import { base } from '$app/paths';
 
     // Animation trigger for elements
     let isVisible = $state(false);
@@ -8,12 +9,12 @@
 
     // Project images for background slideshow
     const projectImages = [
-        { id: 1, src: "/images/project1.jpg", alt: "Industrial Processing Equipment" },
-        { id: 2, src: "/images/project2.jpg", alt: "Valve Control Systems" },
-        { id: 3, src: "/images/project3.jpg", alt: "Large Scale Processing" },
-        { id: 4, src: "/images/project4.jpg", alt: "Fire Suppression Systems" },
-        { id: 5, src: "/images/project5.jpg", alt: "HVAC Systems" },
-        { id: 6, src: "/images/project6.jpg", alt: "Mechanical Engineering" }
+        { id: 1, src: `${base}/images/project1.jpg`, alt: "Industrial Processing Equipment" },
+        { id: 2, src: `${base}/images/project2.jpg`, alt: "Valve Control Systems" },
+        { id: 3, src: `${base}/images/project3.jpg`, alt: "Large Scale Processing" },
+        { id: 4, src: `${base}/images/project4.jpg`, alt: "Fire Suppression Systems" },
+        { id: 5, src: `${base}/images/project5.jpg`, alt: "HVAC Systems" },
+        { id: 6, src: `${base}/images/project6.jpg`, alt: "Mechanical Engineering" }
     ];
 
     onMount(() => {
@@ -110,7 +111,7 @@
                         <div class="relative group">
                             <div class="absolute -inset-1 bg-gradient-to-r from-red-500 to-blue-500 rounded-lg blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
                             <div class="relative p-1 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-                                <img src="logo/sra.png" alt="SRA Engineering Logo"
+                                <img src="{base}/logo/sra.png" alt="SRA Engineering Logo"
                                      class="h-16 md:h-20 transform transition-all duration-500 hover:scale-105 filter brightness-110" />
                             </div>
                         </div>

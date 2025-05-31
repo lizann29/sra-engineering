@@ -1,15 +1,16 @@
 <!-- src/lib/components/BackgroundSlideshow.svelte -->
 <script lang="ts">
     import { onMount } from 'svelte';
+    import { base } from '$app/paths';
 
     // Project images - შენი ნამდვილი ფოტოების array
     const projectImages = [
-        { id: 1, src: "/images/project1.jpeg", alt: "Industrial Processing Equipment" },
-        { id: 2, src: "/images/project2.jpeg", alt: "Valve Control Systems" },
-        { id: 3, src: "/images/project3.jpeg", alt: "Large Scale Processing" },
-        { id: 4, src: "/images/project4.jpeg", alt: "Fire Suppression Systems" },
-        { id: 5, src: "/images/project5.jpeg", alt: "HVAC Systems" },
-        { id: 6, src: "/images/project6.jpeg", alt: "Mechanical Engineering" }
+        { id: 1, src: `${base}/images/project1.jpeg`, alt: "Industrial Processing Equipment" },
+        { id: 2, src: `${base}/images/project2.jpeg`, alt: "Valve Control Systems" },
+        { id: 3, src: `${base}/images/project3.jpeg`, alt: "Large Scale Processing" },
+        { id: 4, src: `${base}/images/project4.jpeg`, alt: "Fire Suppression Systems" },
+        { id: 5, src: `${base}/images/project5.jpeg`, alt: "HVAC Systems" },
+        { id: 6, src: `${base}/images/project6.jpeg`, alt: "Mechanical Engineering" }
     ];
 
     let currentSlide = $state(0);

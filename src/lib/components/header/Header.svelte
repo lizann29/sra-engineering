@@ -62,9 +62,9 @@
         <div class="flex justify-between items-center h-20">
             <!-- Logo -->
             <div class="flex-shrink-0">
-                <a href="/" class="text-2xl font-bold transition-colors">
+                <a href="{base}/" class="text-2xl font-bold transition-colors">
                     <img
-                            src="/images/logo.png"
+                            src="{base}/images/logo.png"
                             alt="Company Logo"
                             class="h-40 md:h-42 w-auto object-contain filter brightness-110"
                     >
@@ -82,7 +82,7 @@
                     </a>
                 {/each}
                 <a
-                        href="/client"
+                        href="{base}/client"
                         class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-sm transition-all duration-200 font-semibold text-sm uppercase tracking-wide shadow-lg hover:shadow-xl border border-red-600 hover:border-red-700"
                 >
                     Become a client
@@ -116,7 +116,7 @@
                 <nav class="flex flex-col space-y-4">
                     {#each navItems as item}
                         <a
-                                href={item.path}
+                                href="{base}{item.path}"
                                 class="text-white hover:text-red-400 py-3 transition-all duration-200 font-medium tracking-wide text-sm uppercase border-l-4 border-transparent hover:border-red-400 pl-4"
                                 on:click={() => isMenuOpen = false}
                         >
@@ -124,7 +124,7 @@
                         </a>
                     {/each}
                     <a
-                            href="/client"
+                            href="{base}/client"
                             class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-sm transition-all duration-200 font-semibold text-sm uppercase tracking-wide w-full text-center mt-6 shadow-lg border border-red-600"
                             on:click={() => isMenuOpen = false}
                     >

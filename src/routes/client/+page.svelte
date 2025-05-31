@@ -1,4 +1,8 @@
 <!-- ContactForm.svelte -->
+<script lang="ts">
+    import { base } from '$app/paths';
+</script>
+
 <div style="width: 100%" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 p-4">
     <div class="max-w-md w-full bg-white/10 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/20 p-8 relative">
         <!-- Close button in the top-right corner -->
@@ -13,7 +17,7 @@
             <div class="relative">
                 <div class="absolute -inset-2 bg-gradient-to-r from-red-500/30 to-blue-500/30 rounded-lg blur-lg opacity-50"></div>
                 <div class="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4">
-                    <img src="/images/logo.png" alt="SRA Engineering Logo" class="h-16 filter brightness-110" />
+                    <img src="{base}/images/logo.png" alt="SRA Engineering Logo" class="h-16 filter brightness-110" />
                 </div>
             </div>
         </div>

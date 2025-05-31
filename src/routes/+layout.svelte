@@ -1,35 +1,46 @@
 <script lang="ts">
-
+    import { onMount } from 'svelte';
     import '../app.css';
     import PageContainer from "$lib/components/page-container/PageContainer.svelte";
     import Meta from "../lib/components/library/Meta/Meta.svelte";
     import Header from "$lib/components/header/Header.svelte";
     import Footer from "$lib/components/footer/Footer.svelte";
+    import Loader from "$lib/components/Loader.svelte";
 
     interface Props {
         children?: import('svelte').Snippet;
     }
 
-    let {children}: Props = $props();
+    let { children }: Props = $props();
+    let isLoading = $state(true);
 
+    onMount(() => {
+        // Wait for DOM to be fully loaded and rendered
+        setTimeout(() => {
+            isLoading = false;
+        }, 2000); // 2 seconds - adjust as needed
+    });
 </script>
+
 <Meta/>
 
-<div class="main">
-    <Header/>
+<!-- Fullscreen Loader -->
+<Loader {isLoading} />
 
-    <div class="main-container">
-        <PageContainer>
-            {@render children?.()}
-        </PageContainer>
+<!-- Main Content -->
+{#if !isLoading}
+    <div class="main">
+        <Header/>
+        <div class="main-container">
+            <PageContainer>
+                {@render children?.()}
+            </PageContainer>
+        </div>
+        <Footer/>
     </div>
-    <Footer/>
-
-</div>
-
+{/if}
 
 <style lang="scss">
-
   .main {
     background: var(--White-600, #FFF);
   }

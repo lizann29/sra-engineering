@@ -5,7 +5,7 @@
     import Meta from "../lib/components/library/Meta/Meta.svelte";
     import Header from "$lib/components/header/Header.svelte";
     import Footer from "$lib/components/footer/Footer.svelte";
-    import Loader from "$lib/components/Loader.svelte";
+    import Loader from "$lib/components/loader/Loader.svelte";
 
     interface Props {
         children?: import('svelte').Snippet;

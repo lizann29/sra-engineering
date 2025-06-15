@@ -6,11 +6,11 @@
 <div style="width: 100%" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 p-4">
     <div class="max-w-md w-full bg-white/10 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/20 p-8 relative">
         <!-- Close button in the top-right corner -->
-        <button class="absolute top-4 right-4 text-white hover:text-red-400 transition-colors duration-200 p-2 rounded-full hover:bg-white/10">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-        </button>
+<!--        <button class="absolute top-4 right-4 text-white hover:text-red-400 transition-colors duration-200 p-2 rounded-full hover:bg-white/10">-->
+<!--            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">-->
+<!--                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />-->
+<!--            </svg>-->
+<!--        </button>-->
 
         <!-- Logo with professional styling -->
         <div class="flex justify-center mb-8">

@@ -2,20 +2,31 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { base } from '$app/paths';
+    import { t } from '$lib/stores/translations.js';
 
     // Animation trigger for elements
     let isVisible = $state(false);
     let currentSlide = $state(0);
 
+    // Derived translations for alt text
+    const imageAlts = $derived({
+        industrial: $t('industrial_processing_equipment', 'Industrial Processing Equipment'),
+        valve: $t('valve_control_systems', 'Valve Control Systems'),
+        processing: $t('large_scale_processing', 'Large Scale Processing'),
+        fire: $t('fire_suppression_systems', 'Fire Suppression Systems'),
+        hvac: $t('hvac_systems', 'HVAC Systems'),
+        mechanical: $t('mechanical_engineering', 'Mechanical Engineering')
+    });
+
     // Project images for background slideshow
-    const projectImages = [
-        { id: 1, src: `${base}/images/project1.jpg`, alt: "Industrial Processing Equipment" },
-        { id: 2, src: `${base}/images/project2.jpg`, alt: "Valve Control Systems" },
-        { id: 3, src: `${base}/images/project3.jpg`, alt: "Large Scale Processing" },
-        { id: 4, src: `${base}/images/project4.jpg`, alt: "Fire Suppression Systems" },
-        { id: 5, src: `${base}/images/project5.jpg`, alt: "HVAC Systems" },
-        { id: 6, src: `${base}/images/project6.jpg`, alt: "Mechanical Engineering" }
-    ];
+    const projectImages = $derived([
+        { id: 1, src: `${base}/images/project1.jpg`, alt: imageAlts.industrial },
+        { id: 2, src: `${base}/images/project2.jpg`, alt: imageAlts.valve },
+        { id: 3, src: `${base}/images/project3.jpg`, alt: imageAlts.processing },
+        { id: 4, src: `${base}/images/project4.jpg`, alt: imageAlts.fire },
+        { id: 5, src: `${base}/images/project5.jpg`, alt: imageAlts.hvac },
+        { id: 6, src: `${base}/images/project6.jpg`, alt: imageAlts.mechanical }
+    ]);
 
     onMount(() => {
         // Trigger animations after component loads
@@ -43,6 +54,7 @@
                     <div
                             class="w-full h-full bg-cover bg-center bg-no-repeat transform transition-transform duration-[8000ms] ease-in-out ken-burns {index === currentSlide ? 'scale-110' : 'scale-100'}"
                             style="background-image: url('{image.src}'); background-position: {index % 2 === 0 ? 'center top' : 'center bottom'};"
+                            aria-label={image.alt}
                     ></div>
                 </div>
             {/each}
@@ -70,17 +82,16 @@
                      class:opacity-0={!isVisible}>
                     <div class="relative mb-2">
                         <span class="inline-block h-1 w-12 bg-red-500 mb-2"></span>
-                        <h2 class="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">Our <span class="text-red-400">Vision</span></h2>
+                        <h2 class="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">{$t('our', 'Our')} <span class="text-red-400">{$t('vision', 'Vision')}</span></h2>
                     </div>
                     <p class="text-xl leading-relaxed tracking-wide text-gray-200 font-light">
-                        To become a leading and preferred company in mechanical and electrical installations for buildings by
-                        delivering <span class="font-semibold text-white">innovative, sustainable, and reliable</span> solutions.
+                        {$t('vision_description', 'To become a leading and preferred company in mechanical and electrical installations for buildings by delivering')} <span class="font-semibold text-white">{$t('innovative_sustainable_reliable', 'innovative, sustainable, and reliable')}</span> {$t('solutions', 'solutions')}.
                     </p>
 
                     <!-- Enhanced visual element with professional styling -->
                     <div class="mt-8 bg-white/10 backdrop-blur-sm border-l-4 border-red-500 p-4 rounded-r-lg shadow-lg">
                         <p class="text-red-200 italic font-medium">
-                            "Building tomorrow's infrastructure with today's innovation"
+                            "{$t('building_tomorrow_quote', 'Building tomorrow\'s infrastructure with today\'s innovation')}"
                         </p>
                     </div>
                 </div>
@@ -91,18 +102,18 @@
                      class:opacity-0={!isVisible}>
                     <div class="relative mb-2">
                         <span class="inline-block h-1 w-12 bg-blue-400 mb-2"></span>
-                        <h2 class="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">Our <span class="text-blue-400">Mission</span></h2>
+                        <h2 class="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">{$t('our', 'Our')} <span class="text-blue-400">{$t('mission', 'Mission')}</span></h2>
                     </div>
                     <p class="text-xl leading-relaxed tracking-wide text-gray-200 font-light">
-                        To design and implement high-quality, safe, and environmentally responsible <span class="font-semibold text-white">mechanical and electrical</span>
-                        systems in line with engineering principles, while always prioritizing customer satisfaction.
+                        {$t('mission_description', 'To design and implement high-quality, safe, and environmentally responsible')} <span class="font-semibold text-white">{$t('mechanical_and_electrical', 'mechanical and electrical')}</span>
+                        {$t('mission_description_end', 'systems in line with engineering principles, while always prioritizing customer satisfaction')}.
                     </p>
 
                     <!-- Enhanced visual elements with professional styling -->
                     <div class="mt-8 flex flex-wrap gap-3">
-                        <span class="px-4 py-2 bg-blue-500/20 border border-blue-400/30 text-blue-200 rounded-full text-sm font-medium backdrop-blur-sm">Sustainability</span>
-                        <span class="px-4 py-2 bg-blue-500/20 border border-blue-400/30 text-blue-200 rounded-full text-sm font-medium backdrop-blur-sm">Innovation</span>
-                        <span class="px-4 py-2 bg-blue-500/20 border border-blue-400/30 text-blue-200 rounded-full text-sm font-medium backdrop-blur-sm">Excellence</span>
+                        <span class="px-4 py-2 bg-blue-500/20 border border-blue-400/30 text-blue-200 rounded-full text-sm font-medium backdrop-blur-sm">{$t('sustainability', 'Sustainability')}</span>
+                        <span class="px-4 py-2 bg-blue-500/20 border border-blue-400/30 text-blue-200 rounded-full text-sm font-medium backdrop-blur-sm">{$t('innovation', 'Innovation')}</span>
+                        <span class="px-4 py-2 bg-blue-500/20 border border-blue-400/30 text-blue-200 rounded-full text-sm font-medium backdrop-blur-sm">{$t('excellence', 'Excellence')}</span>
                     </div>
 
                     <div class="mt-10 flex justify-center md:justify-end transform transition-all duration-1000 delay-500"
@@ -111,7 +122,7 @@
                         <div class="relative group">
                             <div class="absolute -inset-1 bg-gradient-to-r from-red-500 to-blue-500 rounded-lg blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
                             <div class="relative p-1 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-                                <img src="{base}/images/logo.png" alt="SRA Engineering Logo"
+                                <img src="{base}/images/logo.png" alt={$t('sra_engineering_logo', 'SRA Engineering Logo')}
                                      class="h-16 md:h-20 transform transition-all duration-500 hover:scale-105 filter brightness-110" />
                             </div>
                         </div>

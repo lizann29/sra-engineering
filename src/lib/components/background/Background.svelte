@@ -2,16 +2,27 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { base } from '$app/paths';
+    import { t } from '$lib/stores/translations.js';
 
-    // Project images - შენი ნამდვილი ფოტოების array
-    const projectImages = [
-        { id: 1, src: `${base}/images/project1.jpeg`, alt: "Industrial Processing Equipment" },
-        { id: 2, src: `${base}/images/project2.jpeg`, alt: "Valve Control Systems" },
-        { id: 3, src: `${base}/images/project3.jpeg`, alt: "Large Scale Processing" },
-        { id: 4, src: `${base}/images/project4.jpeg`, alt: "Fire Suppression Systems" },
-        { id: 5, src: `${base}/images/project5.jpeg`, alt: "HVAC Systems" },
-        { id: 6, src: `${base}/images/project6.jpeg`, alt: "Mechanical Engineering" }
-    ];
+    // Derived translations for alt text
+    const imageAlts = $derived({
+        industrial: $t('industrial_processing_equipment', 'Industrial Processing Equipment'),
+        valve: $t('valve_control_systems', 'Valve Control Systems'),
+        processing: $t('large_scale_processing', 'Large Scale Processing'),
+        fire: $t('fire_suppression_systems', 'Fire Suppression Systems'),
+        hvac: $t('hvac_systems', 'HVAC Systems'),
+        mechanical: $t('mechanical_engineering', 'Mechanical Engineering')
+    });
+
+    // Project images with translations
+    const projectImages = $derived([
+        { id: 1, src: `${base}/images/project1.jpeg`, alt: imageAlts.industrial },
+        { id: 2, src: `${base}/images/project2.jpeg`, alt: imageAlts.valve },
+        { id: 3, src: `${base}/images/project3.jpeg`, alt: imageAlts.processing },
+        { id: 4, src: `${base}/images/project4.jpeg`, alt: imageAlts.fire },
+        { id: 5, src: `${base}/images/project5.jpeg`, alt: imageAlts.hvac },
+        { id: 6, src: `${base}/images/project6.jpeg`, alt: imageAlts.mechanical }
+    ]);
 
     let currentSlide = $state(0);
 
@@ -35,6 +46,7 @@
                 <div
                         class="w-full h-full bg-cover bg-center bg-no-repeat transform transition-transform duration-[8000ms] ease-in-out ken-burns {index === currentSlide ? 'scale-110' : 'scale-100'}"
                         style="background-image: url('{image.src}'); background-position: {index % 2 === 0 ? 'center top' : 'center bottom'};"
+                        aria-label={image.alt}
                 ></div>
             </div>
         {/each}
@@ -50,12 +62,12 @@
             <!-- Main Title -->
             <div class="mb-8">
                 <h1 class="text-6xl md:text-8xl lg:text-9xl font-black text-white tracking-wider mb-4">
-                    HVAC
+                    {$t('hvac', 'HVAC')}
                 </h1>
                 <div class="flex items-center justify-center space-x-6">
                     <div class="h-1 w-20 bg-red-600"></div>
                     <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white tracking-widest">
-                        SRA ENGINEERING
+                        {$t('sra_engineering', 'SRA ENGINEERING')}
                     </h2>
                     <div class="h-1 w-20 bg-red-600"></div>
                 </div>

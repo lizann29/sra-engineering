@@ -1,5 +1,7 @@
 <!-- src/lib/components/Footer.svelte -->
 <script lang="ts">
+    import { t } from '$lib/stores/translations.js';
+
     // Function to open Google Maps location
     function openGoogleMaps() {
         window.open('https://maps.google.com/?q=41.6863086,44.8272199', '_blank');
@@ -25,9 +27,9 @@
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center relative z-10">
             <!-- Contact Information -->
             <div class="text-white mb-8 md:mb-0 text-center md:text-left">
-                <h2 class="text-2xl font-bold mb-4 text-white uppercase tracking-wide">Contacts</h2>
+                <h2 class="text-2xl font-bold mb-4 text-white uppercase tracking-wide">{$t('contacts', 'Contacts')}</h2>
                 <div class="mb-2">
-                    <p class="text-sm mb-2 text-gray-300 uppercase tracking-wider">Support:</p>
+                    <p class="text-sm mb-2 text-gray-300 uppercase tracking-wider">{$t('support', 'Support')}:</p>
                     <div class="flex items-center justify-center md:justify-start mb-4">
                         <p class="font-bold text-lg">
                             <a href="tel:+905333654128" class="hover:text-red-400 transition-colors duration-200">+90 533 365 41 28</a>
@@ -67,7 +69,7 @@
                     </div>
 
                     <div class="mt-4">
-                        <p class="text-sm text-gray-300 uppercase tracking-wider mb-1">Email:</p>
+                        <p class="text-sm text-gray-300 uppercase tracking-wider mb-1">{$t('email', 'Email')}:</p>
                         <p class="font-bold text-lg">
                             <a href="mailto:info@sra.ge" class="hover:text-red-400 transition-colors duration-200">info@sra.ge</a>
                         </p>
@@ -80,13 +82,13 @@
 
             <!-- Right Content - Address -->
             <div class="text-white text-center md:text-left mb-8 md:mb-0">
-                <p class="text-sm mb-2 text-gray-300 uppercase tracking-wider">Address</p>
+                <p class="text-sm mb-2 text-gray-300 uppercase tracking-wider">{$t('address', 'Address')}</p>
                 <div
                         class="cursor-pointer hover:text-red-400 transition-colors duration-200"
                         on:click={openGoogleMaps}
                 >
-                    <p class="font-bold text-lg">Krtsanisi Ortachala street</p>
-                    <p class="font-bold text-lg">Tbilisi</p>
+                    <p class="font-bold text-lg">{$t('street_address', 'Krtsanisi Ortachala street')}</p>
+                    <p class="font-bold text-lg">{$t('city', 'Tbilisi')}</p>
                 </div>
             </div>
 
@@ -96,7 +98,7 @@
                     <div class="w-20 h-20 flex items-center justify-center">
                         <div class="text-xl text-slate-800 font-bold">
                             <span class="block text-center font-black tracking-wide">SRA</span>
-                            <span class="block text-xs text-center font-semibold tracking-widest">ENGINEERING</span>
+                            <span class="block text-xs text-center font-semibold tracking-widest">{$t('engineering', 'ENGINEERING')}</span>
                         </div>
                     </div>
                     <!-- Pointer Triangle -->
@@ -110,8 +112,8 @@
     <div class="w-full bg-slate-900 py-4 border-t border-slate-700">
         <div class="container mx-auto px-4">
             <div class="text-white text-sm flex flex-col md:flex-row items-center justify-center md:justify-start">
-                <span class="font-bold mr-2 uppercase tracking-wide">SRA ENGINEERING</span>
-                <span class="text-gray-300">International Company. © ყველა უფლება დაცულია.</span>
+                <span class="font-bold mr-2 uppercase tracking-wide">{$t('company_name', 'SRA ENGINEERING')}</span>
+                <span class="text-gray-300">{$t('copyright_text', 'International Company. © ყველა უფლება დაცულია.')}</span>
             </div>
         </div>
     </div>

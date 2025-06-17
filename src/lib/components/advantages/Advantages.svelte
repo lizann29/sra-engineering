@@ -1,6 +1,7 @@
 <!-- src/lib/components/Advantages.svelte -->
 <script lang="ts">
     import { onMount } from 'svelte';
+    import { t } from '$lib/stores/translations.js';
 
     // Animation states for each card
     let visible = $state([false, false, false]);
@@ -12,27 +13,26 @@
         setTimeout(() => { visible[2] = true; }, 900);
     });
 
-
-    const advantages = [
+    const advantages = $derived([
         {
-            title: "Guarantee",
-            description: "We faultlessly fulfill responsibilities taken, guaranteeing a careful attention to the customer's needs.",
+            title: $t('guarantee', 'Guarantee'),
+            description: $t('guarantee_description', 'We faultlessly fulfill responsibilities taken, guaranteeing a careful attention to the customer\'s needs.'),
             accentColor: "red",
             icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
         },
         {
-            title: "Support",
-            description: "We accompany our customers at all stages of cooperation, providing a free visit of an engineer and an audit performance, following strict deadlines.",
+            title: $t('support', 'Support'),
+            description: $t('support_description', 'We accompany our customers at all stages of cooperation, providing a free visit of an engineer and an audit performance, following strict deadlines.'),
             accentColor: "blue",
             icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
         },
         {
-            title: "Expertise",
-            description: "We are proud to move on customer's infrastructure to a higher level of efficiency thanks to the implementation of our solutions.",
+            title: $t('expertise', 'Expertise'),
+            description: $t('expertise_description', 'We are proud to move on customer\'s infrastructure to a higher level of efficiency thanks to the implementation of our solutions.'),
             accentColor: "red",
             icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
         },
-    ];
+    ]);
 </script>
 
 <div class="advantages-container w-full py-20 px-4 bg-gradient-to-br from-slate-50 via-gray-100 to-slate-100 relative overflow-hidden">
@@ -50,9 +50,9 @@
             <div class="inline-block mb-4">
                 <div class="h-1 w-20 bg-red-600 mx-auto mb-6"></div>
                 <h1 class="text-5xl md:text-6xl font-black text-slate-900 tracking-tight mb-4">
-                    Our Advantages
+                    {$t('our_advantages', 'Our Advantages')}
                 </h1>
-                <p class="text-xl text-slate-600 font-medium">Professional engineering solutions that deliver results</p>
+                <p class="text-xl text-slate-600 font-medium">{$t('professional_engineering_solutions', 'Professional engineering solutions that deliver results')}</p>
             </div>
         </div>
 
@@ -107,7 +107,7 @@
         <div class="text-center mt-16">
             <div class="inline-flex items-center space-x-4 bg-white border border-slate-200 rounded-full px-8 py-4 shadow-sm">
                 <div class="w-2 h-2 bg-red-600 rounded-full"></div>
-                <span class="text-slate-700 font-semibold uppercase tracking-wide text-sm">SRA Engineering Excellence</span>
+                <span class="text-slate-700 font-semibold uppercase tracking-wide text-sm">{$t('sra_engineering_excellence', 'SRA Engineering Excellence')}</span>
                 <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
             </div>
         </div>

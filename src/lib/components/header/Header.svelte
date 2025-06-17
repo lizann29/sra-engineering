@@ -2,13 +2,25 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { base } from '$app/paths';
+    import { enhance } from "$app/forms";
+    import { t, setLanguage } from '$lib/stores/translations.js';
+    import LanguageSwitcher from '../LanguageSwitcher.svelte';
 
-    const navItems = $state([
-        { title: 'Services', path: `/` },
-        { title: 'Projects', path: `/projects` },
-        { title: 'About Company', path: `/` },
-        { title: 'Partners', path: `/` },
-        { title: 'Contacts', path: `/` }
+    // Create derived nav items
+    const navTitles = $derived({
+        services: $t('services', 'Services'),
+        projects: $t('projects', 'Projects'),
+        aboutCompany: $t('about_company', 'About Company'),
+        partners: $t('partners', 'Partners'),
+        contacts: $t('contacts', 'Contacts')
+    });
+
+    const navItems = $derived([
+        { title: navTitles.services, path: `/` },
+        { title: navTitles.projects, path: `/projects` },
+        { title: navTitles.aboutCompany, path: `/` },
+        { title: navTitles.partners, path: `/` },
+        { title: navTitles.contacts, path: `/` }
     ]);
 
     // Mobile menu state
@@ -46,6 +58,12 @@
             window.removeEventListener('scroll', handleScroll);
         };
     });
+
+    function submitOnChange(event) {
+        const selectedLang = event.target.value;
+        setLanguage(selectedLang);
+        event.target.parentElement.submit();
+    }
 </script>
 
 <header
@@ -65,7 +83,7 @@
                 <a href="{base}/" class="text-2xl font-bold transition-colors">
                     <img
                             src="{base}/images/logo.png"
-                            alt="Company Logo"
+                            alt={$t('company_logo', 'Company Logo')}
                             class="h-40 md:h-42 w-auto object-contain filter brightness-110"
                     >
                 </a>
@@ -85,20 +103,20 @@
                         href="{base}/client"
                         class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-sm transition-all duration-200 font-semibold text-sm uppercase tracking-wide shadow-lg hover:shadow-xl border border-red-600 hover:border-red-700"
                 >
-                    Become a client
+                    {$t('become_a_client', 'Become a client')}
                 </a>
             </nav>
 
             <!-- Language Switcher (Desktop) -->
             <div class="hidden lg:block">
-                <!--                <LanguageSwitcher />-->
+                <LanguageSwitcher />
             </div>
 
             <!-- Mobile menu button -->
             <button
                     class="lg:hidden p-2 focus:outline-none transition-colors text-white hover:text-red-400"
                     on:click={toggleMenu}
-                    aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+                    aria-label={isMenuOpen ? $t('close_menu', 'Close menu') : $t('open_menu', 'Open menu')}
             >
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                     {#if isMenuOpen}
@@ -128,12 +146,12 @@
                             class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-sm transition-all duration-200 font-semibold text-sm uppercase tracking-wide w-full text-center mt-6 shadow-lg border border-red-600"
                             on:click={() => isMenuOpen = false}
                     >
-                        Become a client
+                        {$t('become_a_client', 'Become a client')}
                     </a>
 
                     <!-- Language Switcher (Mobile) -->
                     <div class="pt-4 border-t border-slate-700 mt-4">
-                        <!--                        <LanguageSwitcher />-->
+                        <LanguageSwitcher />
                     </div>
                 </nav>
             </div>

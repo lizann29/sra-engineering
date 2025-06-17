@@ -2,81 +2,126 @@
     import { onMount } from 'svelte';
     import { fade, fly } from 'svelte/transition';
     import { base } from '$app/paths';
+    import { t } from '$lib/stores/translations.js';
 
-    const services = [
+    // Create derived translations for services
+    const serviceTranslations = $derived({
+        // Service titles
+        plumbing_title: $t('plumbing_system_installations', 'Plumbing System Installations'),
+        plumbing_short: $t('plumbing_systems', 'Plumbing Systems'),
+        plumbing_desc: $t('plumbing_description', 'We design and install reliable plumbing systems for residential, commercial, and industrial buildings, ensuring optimal water distribution and waste management.'),
+
+        heating_title: $t('heating_cooling_installations', 'Heating and Cooling System Installations'),
+        heating_short: $t('heating_cooling', 'Heating & Cooling'),
+        heating_desc: $t('heating_description', 'Our team provides efficient heating and cooling solutions tailored to your building\'s needs, using modern and energy-saving technologies.'),
+
+        ventilation_title: $t('ventilation_installations', 'Ventilation System Installations'),
+        ventilation_short: $t('ventilation', 'Ventilation'),
+        ventilation_desc: $t('ventilation_description', 'We implement ventilation systems that ensure clean air circulation, maintaining indoor air quality and comfort in all environments.'),
+
+        fire_title: $t('fire_extinguishing_installations', 'Fire Extinguishing System Installations'),
+        fire_short: $t('fire_extinguishing', 'Fire Extinguishing'),
+        fire_desc: $t('fire_description', 'We install certified fire suppression systems, including sprinklers and extinguishing networks, in compliance with safety regulations and standards.'),
+
+        vrf_title: $t('vrf_ac_installations', 'VRF and Air Conditioning System Installations'),
+        vrf_short: $t('vrf_ac_systems', 'VRF & AC Systems'),
+        vrf_desc: $t('vrf_description', 'Our VRF and air conditioning systems offer flexible, energy-efficient climate control for buildings of any size or complexity.'),
+
+        siphonic_title: $t('siphonic_drainage_installations', 'Siphonic Rainwater Drainage System Installations'),
+        siphonic_short: $t('rainwater_drainage', 'Rainwater Drainage'),
+        siphonic_desc: $t('siphonic_description', 'We design and install siphonic systems for rapid and efficient rainwater drainage from roofs, minimizing pipework and maximizing flow.'),
+
+        passive_title: $t('passive_fire_installations', 'Passive Fire Protection System Installations'),
+        passive_short: $t('passive_fire_protection', 'Passive Fire Protection'),
+        passive_desc: $t('passive_description', 'We apply passive fire stopping solutions to contain fire and smoke, ensuring the integrity of building compartments and compliance with fire codes.'),
+
+        electrical_title: $t('electrical_installations', 'Electrical System Installations'),
+        electrical_short: $t('electrical_systems', 'Electrical Systems'),
+        electrical_desc: $t('electrical_description', 'We provide comprehensive electrical installations, from lighting and power distribution to smart building integrations, all adhering to international safety standards.'),
+
+        // Categories
+        infrastructure: $t('infrastructure', 'Infrastructure'),
+        climate_control: $t('climate_control', 'Climate Control'),
+        air_quality: $t('air_quality', 'Air Quality'),
+        safety_systems: $t('safety_systems', 'Safety Systems'),
+        drainage: $t('drainage', 'Drainage'),
+        power_systems: $t('power_systems', 'Power Systems'),
+    });
+
+    const services = $derived([
         {
             id: 'plumbing',
-            title: 'Plumbing System Installations',
-            shortTitle: 'Plumbing Systems',
-            description: 'We design and install reliable plumbing systems for residential, commercial, and industrial buildings, ensuring optimal water distribution and waste management.',
+            title: serviceTranslations.plumbing_title,
+            shortTitle: serviceTranslations.plumbing_short,
+            description: serviceTranslations.plumbing_desc,
             image: `${base}/images/plumbing.jpg`,
-            category: 'Infrastructure',
+            category: serviceTranslations.infrastructure,
             color: 'blue'
         },
         {
             id: 'heatingcooling',
-            title: 'Heating and Cooling System Installations',
-            shortTitle: 'Heating & Cooling',
-            description: 'Our team provides efficient heating and cooling solutions tailored to your building\'s needs, using modern and energy-saving technologies.',
+            title: serviceTranslations.heating_title,
+            shortTitle: serviceTranslations.heating_short,
+            description: serviceTranslations.heating_desc,
             image: `${base}/images/heating.png`,
-            category: 'Climate Control',
+            category: serviceTranslations.climate_control,
             color: 'red'
         },
         {
             id: 'ventilation',
-            title: 'Ventilation System Installations',
-            shortTitle: 'Ventilation',
-            description: 'We implement ventilation systems that ensure clean air circulation, maintaining indoor air quality and comfort in all environments.',
+            title: serviceTranslations.ventilation_title,
+            shortTitle: serviceTranslations.ventilation_short,
+            description: serviceTranslations.ventilation_desc,
             image: `${base}/images/vintilation.png`,
-            category: 'Air Quality',
+            category: serviceTranslations.air_quality,
             color: 'blue'
         },
         {
             id: 'fireextinguishing',
-            title: 'Fire Extinguishing System Installations',
-            shortTitle: 'Fire Extinguishing',
-            description: 'We install certified fire suppression systems, including sprinklers and extinguishing networks, in compliance with safety regulations and standards.',
+            title: serviceTranslations.fire_title,
+            shortTitle: serviceTranslations.fire_short,
+            description: serviceTranslations.fire_desc,
             image: `${base}/images/project4.jpeg`,
-            category: 'Safety Systems',
+            category: serviceTranslations.safety_systems,
             color: 'red'
         },
         {
             id: 'vrfac',
-            title: 'VRF and Air Conditioning System Installations',
-            shortTitle: 'VRF & AC Systems',
-            description: 'Our VRF and air conditioning systems offer flexible, energy-efficient climate control for buildings of any size or complexity.',
+            title: serviceTranslations.vrf_title,
+            shortTitle: serviceTranslations.vrf_short,
+            description: serviceTranslations.vrf_desc,
             image: `${base}/images/vrfsystem.png`,
-            category: 'Climate Control',
+            category: serviceTranslations.climate_control,
             color: 'blue'
         },
         {
             id: 'siphonic',
-            title: 'Siphonic Rainwater Drainage System Installations',
-            shortTitle: 'Rainwater Drainage',
-            description: 'We design and install siphonic systems for rapid and efficient rainwater drainage from roofs, minimizing pipework and maximizing flow.',
+            title: serviceTranslations.siphonic_title,
+            shortTitle: serviceTranslations.siphonic_short,
+            description: serviceTranslations.siphonic_desc,
             image: `${base}/images/rainwater.png`,
-            category: 'Drainage',
+            category: serviceTranslations.drainage,
             color: 'blue'
         },
         {
             id: 'passivefire',
-            title: 'Passive Fire Protection System Installations',
-            shortTitle: 'Passive Fire Protection',
-            description: 'We apply passive fire stopping solutions to contain fire and smoke, ensuring the integrity of building compartments and compliance with fire codes.',
+            title: serviceTranslations.passive_title,
+            shortTitle: serviceTranslations.passive_short,
+            description: serviceTranslations.passive_desc,
             image: `${base}/images/passiveFireProtectionSystem.png`,
-            category: 'Safety Systems',
+            category: serviceTranslations.safety_systems,
             color: 'red'
         },
         {
             id: 'electrical',
-            title: 'Electrical System Installations',
-            shortTitle: 'Electrical Systems',
-            description: 'We provide comprehensive electrical installations, from lighting and power distribution to smart building integrations, all adhering to international safety standards.',
+            title: serviceTranslations.electrical_title,
+            shortTitle: serviceTranslations.electrical_short,
+            description: serviceTranslations.electrical_desc,
             image: `${base}/images/electricalInstallation.png`,
-            category: 'Power Systems',
+            category: serviceTranslations.power_systems,
             color: 'red'
         }
-    ];
+    ]);
 
     // Svelte 5 state
     let activeServiceId = $state('plumbing');
@@ -119,14 +164,14 @@
         <div class="text-center mb-16">
             <div class="inline-block">
                 <span class="text-blue-600 font-semibold tracking-wider uppercase text-sm mb-4 block">
-                    Professional Solutions
+                    {$t('professional_solutions', 'Professional Solutions')}
                 </span>
                 <h2 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                    Our <span class="text-red-600">Services</span>
+                    {$t('our', 'Our')} <span class="text-red-600">{$t('services', 'Services')}</span>
                 </h2>
                 <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-red-600 mx-auto mb-6"></div>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                    Professional installations tailored to your needs with the highest industry standards
+                    {$t('professional_installations_description', 'Professional installations tailored to your needs with the highest industry standards')}
                 </p>
             </div>
 
@@ -134,15 +179,15 @@
             <div class="grid grid-cols-3 gap-8 mt-12 max-w-2xl mx-auto">
                 <div class="text-center">
                     <div class="text-3xl font-bold text-red-600 mb-2">50+</div>
-                    <div class="text-gray-600 font-medium">Completed Projects</div>
+                    <div class="text-gray-600 font-medium">{$t('completed_projects', 'Completed Projects')}</div>
                 </div>
                 <div class="text-center">
                     <div class="text-3xl font-bold text-blue-600 mb-2">5+</div>
-                    <div class="text-gray-600 font-medium">Years Experience</div>
+                    <div class="text-gray-600 font-medium">{$t('years_experience', 'Years Experience')}</div>
                 </div>
                 <div class="text-center">
                     <div class="text-3xl font-bold text-red-600 mb-2">98%</div>
-                    <div class="text-gray-600 font-medium">Success Rate</div>
+                    <div class="text-gray-600 font-medium">{$t('success_rate', 'Success Rate')}</div>
                 </div>
             </div>
         </div>
@@ -154,7 +199,7 @@
             <div class="lg:col-span-4">
                 <div class="bg-white rounded-2xl shadow-xl p-8 sticky top-8">
                     <h3 class="text-2xl font-bold text-gray-900 mb-8 pb-4 border-b border-gray-200">
-                        Service Categories
+                        {$t('service_categories', 'Service Categories')}
                     </h3>
 
                     <div class="space-y-3">
@@ -247,7 +292,7 @@
                                         <div class="w-2 h-2 rounded-full {
                                             activeService.color === 'red' ? 'bg-red-400' : 'bg-blue-400'
                                         }"></div>
-                                        <span class="text-sm font-medium">Professional Installation</span>
+                                        <span class="text-sm font-medium">{$t('professional_installation', 'Professional Installation')}</span>
                                     </div>
                                 </div>
                             {/key}
@@ -280,8 +325,8 @@
                                                 </svg>
                                             </div>
                                             <div>
-                                                <h5 class="font-semibold text-gray-900 mb-1">Expert Installation</h5>
-                                                <p class="text-sm text-gray-600">Professional certified technicians</p>
+                                                <h5 class="font-semibold text-gray-900 mb-1">{$t('expert_installation', 'Expert Installation')}</h5>
+                                                <p class="text-sm text-gray-600">{$t('professional_certified_technicians', 'Professional certified technicians')}</p>
                                             </div>
                                         </div>
 
@@ -296,8 +341,8 @@
                                                 </svg>
                                             </div>
                                             <div>
-                                                <h5 class="font-semibold text-gray-900 mb-1">Quality Materials</h5>
-                                                <p class="text-sm text-gray-600">Industry-leading components</p>
+                                                <h5 class="font-semibold text-gray-900 mb-1">{$t('quality_materials', 'Quality Materials')}</h5>
+                                                <p class="text-sm text-gray-600">{$t('industry_leading_components', 'Industry-leading components')}</p>
                                             </div>
                                         </div>
 
@@ -312,8 +357,8 @@
                                                 </svg>
                                             </div>
                                             <div>
-                                                <h5 class="font-semibold text-gray-900 mb-1">Full Warranty</h5>
-                                                <p class="text-sm text-gray-600">Comprehensive coverage included</p>
+                                                <h5 class="font-semibold text-gray-900 mb-1">{$t('full_warranty', 'Full Warranty')}</h5>
+                                                <p class="text-sm text-gray-600">{$t('comprehensive_coverage_included', 'Comprehensive coverage included')}</p>
                                             </div>
                                         </div>
 
@@ -328,8 +373,8 @@
                                                 </svg>
                                             </div>
                                             <div>
-                                                <h5 class="font-semibold text-gray-900 mb-1">Fast Delivery</h5>
-                                                <p class="text-sm text-gray-600">On-time project completion</p>
+                                                <h5 class="font-semibold text-gray-900 mb-1">{$t('fast_delivery', 'Fast Delivery')}</h5>
+                                                <p class="text-sm text-gray-600">{$t('ontime_project_completion', 'On-time project completion')}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -341,25 +386,25 @@
                                         <div class="text-2xl font-bold {
                                             activeService.color === 'red' ? 'text-red-600' : 'text-blue-600'
                                         } mb-2">24/7</div>
-                                        <div class="text-sm text-gray-600 font-medium">Support</div>
+                                        <div class="text-sm text-gray-600 font-medium">{$t('support', 'Support')}</div>
                                     </div>
                                     <div class="text-center p-4 bg-gray-50 rounded-xl">
                                         <div class="text-2xl font-bold {
                                             activeService.color === 'red' ? 'text-red-600' : 'text-blue-600'
                                         } mb-2">98%</div>
-                                        <div class="text-sm text-gray-600 font-medium">Success Rate</div>
+                                        <div class="text-sm text-gray-600 font-medium">{$t('success_rate', 'Success Rate')}</div>
                                     </div>
                                     <div class="text-center p-4 bg-gray-50 rounded-xl">
                                         <div class="text-2xl font-bold {
                                             activeService.color === 'red' ? 'text-red-600' : 'text-blue-600'
                                         } mb-2">5★</div>
-                                        <div class="text-sm text-gray-600 font-medium">Rating</div>
+                                        <div class="text-sm text-gray-600 font-medium">{$t('rating', 'Rating')}</div>
                                     </div>
                                     <div class="text-center p-4 bg-gray-50 rounded-xl">
                                         <div class="text-2xl font-bold {
                                             activeService.color === 'red' ? 'text-red-600' : 'text-blue-600'
                                         } mb-2">ISO</div>
-                                        <div class="text-sm text-gray-600 font-medium">Certified</div>
+                                        <div class="text-sm text-gray-600 font-medium">{$t('certified', 'Certified')}</div>
                                     </div>
                                 </div>
 

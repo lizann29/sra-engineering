@@ -1,6 +1,7 @@
 <!-- src/lib/components/HeroBanner.svelte -->
 <script lang="ts">
     import { onMount } from 'svelte';
+    import { t } from '$lib/stores/translations.js';
 
     let isVisible = $state(false);
 
@@ -33,10 +34,10 @@
 
                 <div class="mb-2">
                     <h1 class="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-2 tracking-tight">
-                        COMPANY <span class="text-red-400">"SRA ENGINEERING"</span>
+                        {$t('company', 'COMPANY')} <span class="text-red-400">"{$t('sra_engineering', 'SRA ENGINEERING')}"</span>
                     </h1>
                     <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-blue-200 tracking-wide">
-                        Professional HVAC Solutions
+                        {$t('professional_hvac_solutions', 'Professional HVAC Solutions')}
                     </h2>
                 </div>
 
@@ -44,7 +45,7 @@
                 <div class="mt-4 flex items-center space-x-4">
                     <div class="h-1 w-12 bg-red-500"></div>
                     <p class="text-lg text-gray-200 font-medium uppercase tracking-widest">
-                        Excellence in Engineering
+                        {$t('excellence_in_engineering', 'Excellence in Engineering')}
                     </p>
                 </div>
             </div>
@@ -63,7 +64,7 @@
                                 SRA
                             </div>
                             <div class="text-white font-bold text-sm lg:text-base tracking-widest">
-                                ENGINEERING
+                                {$t('engineering', 'ENGINEERING')}
                             </div>
 
                             <!-- Professional accent lines -->

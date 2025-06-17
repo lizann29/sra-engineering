@@ -1,15 +1,16 @@
 <!-- ProjectDisplay.svelte -->
 <script lang="ts">
     import { base } from '$app/paths';
+    import { t } from '$lib/stores/translations.js';
 
-    const project = {
-        nameEn: "Georgian Sambo Federation Center",
-        location: "Tbilisi, Georgia",
+    const project = $derived({
+        nameEn: $t('georgian_sambo_federation_center', 'Georgian Sambo Federation Center'),
+        location: $t('tbilisi_georgia', 'Tbilisi, Georgia'),
         image: "/images/sambo.png",
-        description: "Modern sports facility featuring state-of-the-art architectural design with extensive glazing, clean geometric lines, and professional training facilities for the Georgian Sambo Federation.",
-        category: "Sports Complex",
-        client: "Georgian Sambo Federation"
-    };
+        description: $t('sambo_description', 'Modern sports facility featuring state-of-the-art architectural design with extensive glazing, clean geometric lines, and professional training facilities for the Georgian Sambo Federation.'),
+        category: $t('sports_complex', 'Sports Complex'),
+        client: $t('georgian_sambo_federation', 'Georgian Sambo Federation')
+    });
 </script>
 
 <section class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-20 px-8 w-full">
@@ -28,13 +29,13 @@
             </div>
 
             <h2 class="text-5xl md:text-7xl font-black text-white mb-6 tracking-wide">
-                FEATURED PROJECTS
+                {$t('featured_projects', 'FEATURED PROJECTS')}
             </h2>
 
             <div class="flex items-center justify-center space-x-6 mb-8">
                 <div class="h-1 w-20 bg-gradient-to-r from-red-500 to-blue-500 rounded-full"></div>
                 <p class="text-xl md:text-2xl font-bold text-white/80 tracking-widest uppercase">
-                    SRA Engineering
+                    {$t('sra_engineering', 'SRA Engineering')}
                 </p>
                 <div class="h-1 w-20 bg-gradient-to-r from-blue-500 to-red-500 rounded-full"></div>
             </div>
@@ -55,7 +56,7 @@
                     <!-- Status Badge -->
                     <div class="absolute top-4 right-4">
                         <span class="px-3 py-1 bg-green-500/80 backdrop-blur-sm text-white text-xs font-medium rounded-full">
-                            In Progress
+                            {$t('in_progress', 'In Progress')}
                         </span>
                     </div>
 
@@ -70,7 +71,7 @@
                         <h3 class="text-3xl font-bold text-white mb-2 leading-tight">
                             {project.nameEn}
                         </h3>
-                        <p class="text-white/60 font-medium italic">by SRA Engineering</p>
+                        <p class="text-white/60 font-medium italic">{$t('by_sra_engineering', 'by SRA Engineering')}</p>
                     </div>
 
                     <!-- Project Details Grid -->
@@ -83,11 +84,10 @@
                                 </svg>
                             </div>
                             <div>
-                                <p class="text-xs text-white/60 font-medium uppercase tracking-wide">Location</p>
+                                <p class="text-xs text-white/60 font-medium uppercase tracking-wide">{$t('location', 'Location')}</p>
                                 <p class="text-white font-semibold">{project.location}</p>
                             </div>
                         </div>
-
 
                         <!-- Category -->
                         <div class="flex items-center space-x-3">
@@ -98,7 +98,7 @@
                                 </svg>
                             </div>
                             <div>
-                                <p class="text-xs text-white/60 font-medium uppercase tracking-wide">Category</p>
+                                <p class="text-xs text-white/60 font-medium uppercase tracking-wide">{$t('category', 'Category')}</p>
                                 <p class="text-white font-semibold">{project.category}</p>
                             </div>
                         </div>
@@ -111,16 +111,11 @@
                                 </svg>
                             </div>
                             <div>
-                                <p class="text-xs text-white/60 font-medium uppercase tracking-wide">Client</p>
+                                <p class="text-xs text-white/60 font-medium uppercase tracking-wide">{$t('client', 'Client')}</p>
                                 <p class="text-white font-semibold">{project.client}</p>
                             </div>
                         </div>
                     </div>
-
-<!--                    &lt;!&ndash; Description &ndash;&gt;-->
-<!--                    <p class="text-white/80 text-lg leading-relaxed">-->
-<!--                        {project.description}-->
-<!--                    </p>-->
 
                     <!-- Action Button -->
                     <div class="pt-4">
@@ -128,7 +123,7 @@
                                 href="{base}/projects"
                                 class="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-red-600 to-blue-600 hover:from-red-700 hover:to-blue-700 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl uppercase tracking-wide text-sm"
                         >
-                            <span>See More Projects</span>
+                            <span>{$t('see_more_projects', 'See More Projects')}</span>
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
                             </svg>

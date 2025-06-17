@@ -6,21 +6,30 @@
     import Header from "$lib/components/header/Header.svelte";
     import Footer from "$lib/components/footer/Footer.svelte";
     import Loader from "$lib/components/loader/Loader.svelte";
+    import { initTranslations, getStoredLanguage } from '$lib/stores/translations.js';
 
     interface Props {
         children?: import('svelte').Snippet;
+        data?: any;
     }
 
-    let { children }: Props = $props();
+    let { children, data }: Props = $props();
     let isLoading = $state(true);
 
-    onMount(() => {
+    onMount(async () => {
+        // Initialize translations
+        const storedLang = getStoredLanguage();
+        const langFromCookie = data?.lang || storedLang;
+        await initTranslations(langFromCookie);
+
         // Wait for DOM to be fully loaded and rendered
         setTimeout(() => {
             isLoading = false;
-        }, 2000); // 2 seconds - adjust as needed
+        }, 2000);
     });
 </script>
+
+<!-- Rest of your layout stays the same -->
 
 <Meta/>
 

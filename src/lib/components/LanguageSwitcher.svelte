@@ -1,13 +1,20 @@
+<!-- src/lib/components/LanguageSwitcher.svelte -->
 <script lang="ts">
     import { createEventDispatcher } from 'svelte';
+    import { currentLang, setLanguage, t } from '$lib/stores/translations.js';
 
     interface Props {
-        currentLanguage: string;
+        currentLanguage?: string;
     }
 
     let { currentLanguage = $bindable() }: Props = $props();
 
     const dispatch = createEventDispatcher();
+
+    // Get current language from store if not provided
+    if (!currentLanguage) {
+        currentLanguage = $currentLang;
+    }
 
     const languages = [
         { code: 'en', name: 'English', flag: '🇺🇸' },
@@ -18,12 +25,12 @@
 
     function changeLanguage(langCode: string) {
         currentLanguage = langCode;
+        setLanguage(langCode); // Update the translation store
         dispatch('languageChanged', { language: langCode });
     }
 </script>
 
 <div class="relative">
-    <label class="block text-white/80 text-sm font-medium mb-2">Language</label>
     <select
             value={currentLanguage}
             on:change={(e) => changeLanguage(e.target.value)}

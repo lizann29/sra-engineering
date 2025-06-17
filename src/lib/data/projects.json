@@ -1,23 +1,23 @@
 [
   {
     "id": 1,
-    "name": "BORNOVA TRAFO MERKEZİ",
-    "nameEn": "Bornova Transformer Center",
-    "company": "BEST İNŞAAT TAAHHÜT A.Ş.",
-    "location": "İZMİR",
-    "contractDate": "21/1/19",
-    "completionDate": "30/6/19",
-    "image": "/images/project1.jpeg"
+    "name": "Sambo Sports Complex",
+    "nameEn": "Sambo Sports Complex",
+    "company": "Georgian Sambo Federation",
+    "location": "Tbilisi",
+    "contractDate": "",
+    "completionDate": "",
+    "image": "/images/sambo.png"
   },
   {
-    "id": 2,
-    "name": "ATİŞ ALANI TRFO MERKEZİ",
-    "nameEn": "Firing Range Transformer Center",
-    "company": "BEST İNŞAAT TAAHHÜT A.Ş.",
-    "location": "İSTANBUL",
-    "contractDate": "25/4/19",
-    "completionDate": "20/10/19",
-    "image": "/images/project2.jpeg"
+    "id": 22,
+    "name": "VR Krtsanisi Resort Residence",
+    "nameEn": "VR Krtsanisi Resort Residencer",
+    "company": "VR Holding",
+    "location": "Tbilisi",
+    "contractDate": "",
+    "completionDate": "",
+    "image": "/images/vr.png"
   },
   {
     "id": 3,
@@ -398,5 +398,25 @@
     "contractDate": "30/9/24",
     "completionDate": "30/6/25",
     "image": "/images/project4.jpeg"
+  },
+  {
+    "id": 41,
+    "name": "BORNOVA TRAFO MERKEZİ",
+    "nameEn": "Bornova Transformer Center",
+    "company": "BEST İNŞAAT TAAHHÜT A.Ş.",
+    "location": "İZMİR",
+    "contractDate": "21/1/19",
+    "completionDate": "30/6/19",
+    "image": "/images/project1.jpeg"
+  },
+  {
+    "id": 42,
+    "name": "ATİŞ ALANI TRFO MERKEZİ",
+    "nameEn": "Firing Range Transformer Center",
+    "company": "BEST İNŞAAT TAAHHÜT A.Ş.",
+    "location": "İSTANBUL",
+    "contractDate": "25/4/19",
+    "completionDate": "20/10/19",
+    "image": "/images/project2.jpeg"
   }
 ]

@@ -4,12 +4,14 @@
     import Advantages from "$lib/components/advantages/Advantages.svelte";
     import Banner from "$lib/components/banner/Banner.svelte";
     import Services from "$lib/components/services/Services.svelte";
+    import ProjectDisplay from "$lib/components/project-display/ProjectDisplay.svelte";
 </script>
 <div class="page">
     <Background/>
     <Banner/>
     <Services/>
     <AboutUs/>
+    <ProjectDisplay/>
     <Advantages/>
 </div>
 

@@ -12,6 +12,7 @@
         setTimeout(() => { visible[2] = true; }, 900);
     });
 
+
     const advantages = [
         {
             title: "Guarantee",

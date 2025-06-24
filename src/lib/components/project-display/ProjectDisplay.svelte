@@ -19,9 +19,9 @@
         <div class="text-center mb-16">
             <div class="mb-8">
                 <div class="relative mx-auto w-32 h-32">
-                    <div class="absolute inset-0 bg-gradient-to-r from-red-500 to-blue-500 rounded-full opacity-20 animate-ping"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-zinc-600 to-gray-700 rounded-full opacity-20 animate-ping"></div>
                     <div class="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-full p-8 flex items-center justify-center">
-                        <svg class="w-16 h-16 text-red-400 animate-pulse" fill="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-16 h-16 text-zinc-400 animate-pulse" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z"/>
                         </svg>
                     </div>
@@ -33,11 +33,11 @@
             </h2>
 
             <div class="flex items-center justify-center space-x-6 mb-8">
-                <div class="h-1 w-20 bg-gradient-to-r from-red-500 to-blue-500 rounded-full"></div>
+                <div class="h-1 w-20 bg-gradient-to-r from-zinc-600 to-gray-700 rounded-full"></div>
                 <p class="text-xl md:text-2xl font-bold text-white/80 tracking-widest uppercase">
                     {$t('sra_engineering', 'SRA Engineering')}
                 </p>
-                <div class="h-1 w-20 bg-gradient-to-r from-blue-500 to-red-500 rounded-full"></div>
+                <div class="h-1 w-20 bg-gradient-to-r from-gray-700 to-zinc-600 rounded-full"></div>
             </div>
         </div>
 
@@ -78,7 +78,7 @@
                     <div class="grid grid-cols-2 gap-4">
                         <!-- Location -->
                         <div class="flex items-center space-x-3">
-                            <div class="w-10 h-10 bg-gradient-to-r from-red-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <div class="w-10 h-10 bg-gradient-to-r from-zinc-600 to-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
                                 <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
                                 </svg>
@@ -91,7 +91,7 @@
 
                         <!-- Category -->
                         <div class="flex items-center space-x-3">
-                            <div class="w-10 h-10 bg-gradient-to-r from-red-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <div class="w-10 h-10 bg-gradient-to-r from-zinc-600 to-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
                                 <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"/>
                                     <path fill-rule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clip-rule="evenodd"/>
@@ -105,7 +105,7 @@
 
                         <!-- Client -->
                         <div class="flex items-center space-x-3">
-                            <div class="w-10 h-10 bg-gradient-to-r from-red-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <div class="w-10 h-10 bg-gradient-to-r from-zinc-600 to-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
                                 <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
                                 </svg>
@@ -121,7 +121,7 @@
                     <div class="pt-4">
                         <a
                                 href="{base}/projects"
-                                class="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-red-600 to-blue-600 hover:from-red-700 hover:to-blue-700 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl uppercase tracking-wide text-sm"
+                                class="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-zinc-600 to-gray-700 hover:from-zinc-700 hover:to-gray-800 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl uppercase tracking-wide text-sm"
                         >
                             <span>{$t('see_more_projects', 'See More Projects')}</span>
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">

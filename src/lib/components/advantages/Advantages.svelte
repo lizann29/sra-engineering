@@ -17,19 +17,19 @@
         {
             title: $t('guarantee', 'Guarantee'),
             description: $t('guarantee_description', 'We faultlessly fulfill responsibilities taken, guaranteeing a careful attention to the customer\'s needs.'),
-            accentColor: "red",
+            accentColor: "steel",
             icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
         },
         {
             title: $t('support', 'Support'),
             description: $t('support_description', 'We accompany our customers at all stages of cooperation, providing a free visit of an engineer and an audit performance, following strict deadlines.'),
-            accentColor: "blue",
+            accentColor: "charcoal",
             icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
         },
         {
             title: $t('expertise', 'Expertise'),
             description: $t('expertise_description', 'We are proud to move on customer\'s infrastructure to a higher level of efficiency thanks to the implementation of our solutions.'),
-            accentColor: "red",
+            accentColor: "steel",
             icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
         },
     ]);
@@ -40,15 +40,15 @@
     <!-- Professional background elements -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
         <div class="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-r from-slate-800 to-slate-600 rounded-full opacity-5 blur-3xl"></div>
-        <div class="absolute -bottom-20 -left-20 w-60 h-60 bg-gradient-to-r from-blue-800 to-blue-600 rounded-full opacity-5 blur-3xl"></div>
-        <div class="absolute top-1/3 right-1/3 w-32 h-32 bg-gradient-to-r from-red-800 to-red-600 rounded-full opacity-5 blur-2xl"></div>
+        <div class="absolute -bottom-20 -left-20 w-60 h-60 bg-gradient-to-r from-zinc-800 to-zinc-600 rounded-full opacity-5 blur-3xl"></div>
+        <div class="absolute top-1/3 right-1/3 w-32 h-32 bg-gradient-to-r from-gray-800 to-gray-600 rounded-full opacity-5 blur-2xl"></div>
     </div>
 
     <div class="relative z-10">
         <!-- Professional title -->
         <div class="text-center mb-16">
             <div class="inline-block mb-4">
-                <div class="h-1 w-20 bg-red-600 mx-auto mb-6"></div>
+                <div class="h-1 w-20 bg-zinc-700 mx-auto mb-6"></div>
                 <h1 class="text-5xl md:text-6xl font-black text-slate-900 tracking-tight mb-4">
                     {$t('our_advantages', 'Our Advantages')}
                 </h1>
@@ -106,9 +106,9 @@
         <!-- Professional bottom section -->
         <div class="text-center mt-16">
             <div class="inline-flex items-center space-x-4 bg-white border border-slate-200 rounded-full px-8 py-4 shadow-sm">
-                <div class="w-2 h-2 bg-red-600 rounded-full"></div>
+                <div class="w-2 h-2 bg-zinc-700 rounded-full"></div>
                 <span class="text-slate-700 font-semibold uppercase tracking-wide text-sm">{$t('sra_engineering_excellence', 'SRA Engineering Excellence')}</span>
-                <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                <div class="w-2 h-2 bg-gray-800 rounded-full"></div>
             </div>
         </div>
     </div>
@@ -130,35 +130,35 @@
     }
 
     /* Specific color classes for dynamic colors */
-    .bg-red-50 {
-        background-color: rgb(254 242 242);
+    .bg-steel-50 {
+        background-color: rgb(248 250 252);
     }
-    .bg-blue-50 {
-        background-color: rgb(239 246 255);
+    .bg-charcoal-50 {
+        background-color: rgb(249 250 251);
     }
-    .text-red-600 {
-        color: rgb(220 38 38);
+    .text-steel-600 {
+        color: rgb(71 85 105);
     }
-    .text-blue-600 {
-        color: rgb(37 99 235);
+    .text-charcoal-600 {
+        color: rgb(55 65 81);
     }
-    .bg-red-600 {
-        background-color: rgb(220 38 38);
+    .bg-steel-600 {
+        background-color: rgb(71 85 105);
     }
-    .bg-blue-600 {
-        background-color: rgb(37 99 235);
+    .bg-charcoal-600 {
+        background-color: rgb(55 65 81);
     }
-    .border-red-500\/30 {
-        border-color: rgb(239 68 68 / 0.3);
+    .border-steel-500\/30 {
+        border-color: rgb(100 116 139 / 0.3);
     }
-    .border-blue-500\/30 {
-        border-color: rgb(59 130 246 / 0.3);
+    .border-charcoal-500\/30 {
+        border-color: rgb(75 85 99 / 0.3);
     }
-    .from-red-600\/5 {
-        --tw-gradient-from: rgb(220 38 38 / 0.05);
+    .from-steel-600\/5 {
+        --tw-gradient-from: rgb(71 85 105 / 0.05);
     }
-    .from-blue-600\/5 {
-        --tw-gradient-from: rgb(37 99 235 / 0.05);
+    .from-charcoal-600\/5 {
+        --tw-gradient-from: rgb(55 65 81 / 0.05);
     }
 
     /* Professional animations */

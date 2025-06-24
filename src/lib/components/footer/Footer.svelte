@@ -9,30 +9,30 @@
 </script>
 
 <footer class="w-full">
-    <div class="relative w-full h-auto md:h-64 bg-gradient-to-r from-slate-800 via-slate-900 to-blue-900 flex items-center overflow-hidden py-8 md:py-0">
+    <div class="relative w-full h-auto md:h-64 bg-gradient-to-r from-black via-gray-900 to-zinc-900 flex items-center overflow-hidden py-8 md:py-0">
         <!-- Map Background - Hidden on Mobile -->
         <div class="absolute right-0 top-0 w-full md:w-3/5 h-full hidden md:block">
             <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d953.5981930801715!2d44.8272199!3d41.6863086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cfea78bc6a1%3A0xc68492dc13a1a5fb!2sOrtachala%20St%2C%20T'bilisi!5e0!3m2!1sen!2sge!4v1714542161623!5m2!1sen!2sge"
                     width="100%"
                     height="100%"
-                    style="border:0;"
+                    style="border:0; filter: grayscale(100%) contrast(1.2);"
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
                     class="w-full h-full object-cover"
             ></iframe>
-            <div class="absolute inset-0 bg-slate-900 opacity-60"></div>
+            <div class="absolute inset-0 bg-black opacity-70"></div>
         </div>
 
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center relative z-10">
             <!-- Contact Information -->
             <div class="text-white mb-8 md:mb-0 text-center md:text-left">
-                <h2 class="text-2xl font-bold mb-4 text-white uppercase tracking-wide">{$t('contacts', 'Contacts')}</h2>
+                <h2 class="text-2xl font-bold mb-4 text-white uppercase tracking-wider">{$t('contacts', 'Contacts')}</h2>
                 <div class="mb-2">
-                    <p class="text-sm mb-2 text-gray-300 uppercase tracking-wider">{$t('support', 'Support')}:</p>
+                    <p class="text-sm mb-2 text-gray-400 uppercase tracking-wider font-medium">{$t('support', 'Support')}</p>
                     <div class="flex items-center justify-center md:justify-start mb-4">
                         <p class="font-bold text-lg">
-                            <a href="tel:+905333654128" class="hover:text-red-400 transition-colors duration-200">+90 533 365 41 28</a>
+                            <a href="tel:+905333654128" class="hover:text-gray-300 transition-colors duration-200">+90 533 365 41 28</a>
                         </p>
                     </div>
 
@@ -69,22 +69,22 @@
                     </div>
 
                     <div class="mt-4">
-                        <p class="text-sm text-gray-300 uppercase tracking-wider mb-1">{$t('email', 'Email')}:</p>
+                        <p class="text-sm text-gray-400 uppercase tracking-wider mb-1 font-medium">{$t('email', 'Email')}</p>
                         <p class="font-bold text-lg">
-                            <a href="mailto:info@sra.ge" class="hover:text-red-400 transition-colors duration-200">info@sra.ge</a>
+                            <a href="mailto:info@sra.ge" class="hover:text-gray-300 transition-colors duration-200">info@sra.ge</a>
                         </p>
                     </div>
                 </div>
             </div>
 
             <!-- Vertical Divider - Visible only on desktop -->
-            <div class="hidden md:block h-32 w-px bg-red-500 mx-8"></div>
+            <div class="hidden md:block h-32 w-px bg-white mx-8"></div>
 
             <!-- Right Content - Address -->
             <div class="text-white text-center md:text-left mb-8 md:mb-0">
-                <p class="text-sm mb-2 text-gray-300 uppercase tracking-wider">{$t('address', 'Address')}</p>
+                <p class="text-sm mb-2 text-gray-400 uppercase tracking-wider font-medium">{$t('address', 'Address')}</p>
                 <div
-                        class="cursor-pointer hover:text-red-400 transition-colors duration-200"
+                        class="cursor-pointer hover:text-gray-300 transition-colors duration-200"
                         on:click={openGoogleMaps}
                 >
                     <p class="font-bold text-lg">{$t('street_address', 'Krtsanisi Ortachala street')}</p>
@@ -94,11 +94,11 @@
 
             <!-- Logo on Map - Visible only on desktop -->
             <div class="absolute cursor-pointer right-12 top-1/2 transform -translate-y-1/2 hidden lg:block">
-                <div class="bg-white bg-opacity-95 p-4 rounded-lg shadow-xl border border-gray-200 relative hover:bg-opacity-100 transition-all duration-200">
+                <div class="bg-white bg-opacity-95 p-4 rounded-none shadow-xl border-2 border-gray-300 relative hover:bg-opacity-100 transition-all duration-200">
                     <div class="w-20 h-20 flex items-center justify-center">
-                        <div class="text-xl text-slate-800 font-bold">
-                            <span class="block text-center font-black tracking-wide">SRA</span>
-                            <span class="block text-xs text-center font-semibold tracking-widest">{$t('engineering', 'ENGINEERING')}</span>
+                        <div class="text-xl text-black font-bold">
+                            <span class="block text-center font-black tracking-wider">SRA</span>
+                            <span class="block text-xs text-center font-bold tracking-widest">{$t('engineering', 'ENGINEERING')}</span>
                         </div>
                     </div>
                     <!-- Pointer Triangle -->
@@ -109,11 +109,11 @@
     </div>
 
     <!-- Bottom Bar -->
-    <div class="w-full bg-slate-900 py-4 border-t border-slate-700">
+    <div class="w-full bg-black py-4 border-t border-gray-800">
         <div class="container mx-auto px-4">
             <div class="text-white text-sm flex flex-col md:flex-row items-center justify-center md:justify-start">
-                <span class="font-bold mr-2 uppercase tracking-wide">{$t('company_name', 'SRA ENGINEERING')}</span>
-                <span class="text-gray-300">{$t('copyright_text', 'International Company. © ყველა უფლება დაცულია.')}</span>
+                <span class="font-bold mr-2 uppercase tracking-wider">{$t('company_name', 'SRA ENGINEERING')}</span>
+                <span class="text-gray-400 font-medium">{$t('copyright_text', 'International Company. © ყველა უფლება დაცულია.')}</span>
             </div>
         </div>
     </div>

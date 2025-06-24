@@ -16,10 +16,10 @@
     <!-- Main diagonal background -->
     <div class="absolute inset-0">
         <!-- Left side - darker -->
-        <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-800 to-blue-900"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-gray-900 to-zinc-900"></div>
 
         <!-- Right diagonal section -->
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 transform origin-top-right"
+        <div class="absolute inset-0 bg-gradient-to-r from-gray-600 via-gray-500 to-gray-400 transform origin-top-right"
              style="clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);"></div>
     </div>
 
@@ -34,17 +34,17 @@
 
                 <div class="mb-2">
                     <h1 class="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-2 tracking-tight">
-                        {$t('company', 'COMPANY')} <span class="text-red-400">"{$t('sra_engineering', 'SRA ENGINEERING')}"</span>
+                        {$t('company', 'COMPANY')} <span class="text-gray-300">"{$t('sra_engineering', 'SRA ENGINEERING')}"</span>
                     </h1>
-                    <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-blue-200 tracking-wide">
+                    <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-gray-300 tracking-wide">
                         {$t('professional_hvac_solutions', 'Professional HVAC Solutions')}
                     </h2>
                 </div>
 
                 <!-- Subtitle with professional styling -->
                 <div class="mt-4 flex items-center space-x-4">
-                    <div class="h-1 w-12 bg-red-500"></div>
-                    <p class="text-lg text-gray-200 font-medium uppercase tracking-widest">
+                    <div class="h-1 w-12 bg-white"></div>
+                    <p class="text-lg text-gray-300 font-semibold uppercase tracking-widest">
                         {$t('excellence_in_engineering', 'Excellence in Engineering')}
                     </p>
                 </div>
@@ -57,7 +57,7 @@
 
                 <div class="relative">
                     <!-- Logo background with professional styling -->
-                    <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6 shadow-xl">
+                    <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-none p-6 shadow-xl">
                         <div class="text-center">
                             <!-- Main logo text -->
                             <div class="text-white font-black text-3xl lg:text-4xl tracking-wider mb-2">
@@ -69,22 +69,22 @@
 
                             <!-- Professional accent lines -->
                             <div class="mt-3 flex justify-center space-x-1">
-                                <div class="w-6 h-px bg-red-500"></div>
-                                <div class="w-6 h-px bg-blue-400"></div>
-                                <div class="w-6 h-px bg-red-500"></div>
+                                <div class="w-6 h-px bg-white"></div>
+                                <div class="w-6 h-px bg-gray-400"></div>
+                                <div class="w-6 h-px bg-white"></div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Glow effect -->
-                    <div class="absolute -inset-2 bg-gradient-to-r from-red-500/20 to-blue-500/20 rounded-lg blur-lg opacity-50"></div>
+                    <div class="absolute -inset-2 bg-gradient-to-r from-white/10 to-gray-300/10 rounded-none blur-lg opacity-30"></div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Decorative elements -->
-    <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-60"></div>
+    <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white to-transparent opacity-60"></div>
 
     <!-- Professional pattern overlay -->
     <div class="absolute inset-0 opacity-5 pointer-events-none"

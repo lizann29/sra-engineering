@@ -68,12 +68,12 @@
 
 <header
         class="fixed w-full z-50 transition-all duration-300 ease-in-out"
-        class:bg-slate-900={isScrolled}
+        class:bg-black={isScrolled}
         class:bg-gradient-to-r={!isScrolled}
-        class:from-slate-900={!isScrolled}
-        class:via-blue-900={!isScrolled}
-        class:to-slate-800={!isScrolled}
-        class:shadow-xl={isScrolled}
+        class:from-black={!isScrolled}
+        class:via-gray-900={!isScrolled}
+        class:to-zinc-900={!isScrolled}
+        class:shadow-2xl={isScrolled}
         class:backdrop-blur-sm={isScrolled}
 >
     <div class="container mx-auto px-4">
@@ -84,7 +84,7 @@
                     <img
                             src="{base}/images/logo.png"
                             alt={$t('company_logo', 'Company Logo')}
-                            class="h-40 md:h-42 w-auto object-contain filter brightness-110"
+                            class="h-40 md:h-42 w-auto object-contain filter brightness-110 contrast-125"
                     >
                 </a>
             </div>
@@ -94,14 +94,15 @@
                 {#each navItems as item}
                     <a
                             href="{base}{item.path}"
-                            class="text-white hover:text-red-400 transition-all duration-200 font-medium tracking-wide text-sm uppercase border-b-2 border-transparent hover:border-red-400 pb-1"
+                            class="text-gray-300 hover:text-white transition-all duration-200 font-semibold tracking-wider text-sm uppercase border-b-2 border-transparent hover:border-white pb-1 relative group"
                     >
                         {item.title}
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
                     </a>
                 {/each}
                 <a
                         href="{base}/client"
-                        class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-sm transition-all duration-200 font-semibold text-sm uppercase tracking-wide shadow-lg hover:shadow-xl border border-red-600 hover:border-red-700"
+                        class="bg-white hover:bg-gray-200 text-black px-6 py-3 rounded-none transition-all duration-200 font-bold text-sm uppercase tracking-wider shadow-lg hover:shadow-xl border-2 border-white hover:border-gray-200"
                 >
                     {$t('become_a_client', 'Become a client')}
                 </a>
@@ -114,11 +115,11 @@
 
             <!-- Mobile menu button -->
             <button
-                    class="lg:hidden p-2 focus:outline-none transition-colors text-white hover:text-red-400"
+                    class="lg:hidden p-2 focus:outline-none transition-colors text-gray-300 hover:text-white"
                     on:click={toggleMenu}
                     aria-label={isMenuOpen ? $t('close_menu', 'Close menu') : $t('open_menu', 'Open menu')}
             >
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
                     {#if isMenuOpen}
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     {:else}
@@ -130,12 +131,12 @@
 
         <!-- Mobile menu -->
         {#if isMenuOpen}
-            <div class="lg:hidden py-4 pb-6 border-t border-slate-700 bg-slate-900/95 backdrop-blur-sm">
+            <div class="lg:hidden py-4 pb-6 border-t border-gray-700 bg-black/98 backdrop-blur-sm">
                 <nav class="flex flex-col space-y-4">
                     {#each navItems as item}
                         <a
                                 href="{base}{item.path}"
-                                class="text-white hover:text-red-400 py-3 transition-all duration-200 font-medium tracking-wide text-sm uppercase border-l-4 border-transparent hover:border-red-400 pl-4"
+                                class="text-gray-300 hover:text-white py-3 transition-all duration-200 font-semibold tracking-wider text-sm uppercase border-l-4 border-transparent hover:border-white pl-4"
                                 on:click={() => isMenuOpen = false}
                         >
                             {item.title}
@@ -143,14 +144,14 @@
                     {/each}
                     <a
                             href="{base}/client"
-                            class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-sm transition-all duration-200 font-semibold text-sm uppercase tracking-wide w-full text-center mt-6 shadow-lg border border-red-600"
+                            class="bg-white hover:bg-gray-200 text-black px-6 py-3 rounded-none transition-all duration-200 font-bold text-sm uppercase tracking-wider w-full text-center mt-6 shadow-lg border-2 border-white"
                             on:click={() => isMenuOpen = false}
                     >
                         {$t('become_a_client', 'Become a client')}
                     </a>
 
                     <!-- Language Switcher (Mobile) -->
-                    <div class="pt-4 border-t border-slate-700 mt-4">
+                    <div class="pt-4 border-t border-gray-700 mt-4">
                         <LanguageSwitcher />
                     </div>
                 </nav>

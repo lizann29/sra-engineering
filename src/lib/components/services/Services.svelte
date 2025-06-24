@@ -56,7 +56,7 @@
             description: serviceTranslations.plumbing_desc,
             image: `${base}/images/plumbing.jpg`,
             category: serviceTranslations.infrastructure,
-            color: 'blue'
+            color: 'charcoal'
         },
         {
             id: 'heatingcooling',
@@ -65,7 +65,7 @@
             description: serviceTranslations.heating_desc,
             image: `${base}/images/heating.png`,
             category: serviceTranslations.climate_control,
-            color: 'red'
+            color: 'steel'
         },
         {
             id: 'ventilation',
@@ -74,7 +74,7 @@
             description: serviceTranslations.ventilation_desc,
             image: `${base}/images/vintilation.png`,
             category: serviceTranslations.air_quality,
-            color: 'blue'
+            color: 'charcoal'
         },
         {
             id: 'fireextinguishing',
@@ -83,7 +83,7 @@
             description: serviceTranslations.fire_desc,
             image: `${base}/images/project4.jpeg`,
             category: serviceTranslations.safety_systems,
-            color: 'red'
+            color: 'steel'
         },
         {
             id: 'vrfac',
@@ -92,7 +92,7 @@
             description: serviceTranslations.vrf_desc,
             image: `${base}/images/vrfsystem.png`,
             category: serviceTranslations.climate_control,
-            color: 'blue'
+            color: 'charcoal'
         },
         {
             id: 'siphonic',
@@ -101,7 +101,7 @@
             description: serviceTranslations.siphonic_desc,
             image: `${base}/images/rainwater.png`,
             category: serviceTranslations.drainage,
-            color: 'blue'
+            color: 'charcoal'
         },
         {
             id: 'passivefire',
@@ -110,7 +110,7 @@
             description: serviceTranslations.passive_desc,
             image: `${base}/images/passiveFireProtectionSystem.png`,
             category: serviceTranslations.safety_systems,
-            color: 'red'
+            color: 'steel'
         },
         {
             id: 'electrical',
@@ -119,7 +119,7 @@
             description: serviceTranslations.electrical_desc,
             image: `${base}/images/electricalInstallation.png`,
             category: serviceTranslations.power_systems,
-            color: 'red'
+            color: 'steel'
         }
     ]);
 
@@ -163,13 +163,13 @@
         <!-- Header Section -->
         <div class="text-center mb-16">
             <div class="inline-block">
-                <span class="text-blue-600 font-semibold tracking-wider uppercase text-sm mb-4 block">
+                <span class="text-zinc-700 font-semibold tracking-wider uppercase text-sm mb-4 block">
                     {$t('professional_solutions', 'Professional Solutions')}
                 </span>
                 <h2 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                    {$t('our', 'Our')} <span class="text-red-600">{$t('services', 'Services')}</span>
+                    {$t('our', 'Our')} <span class="text-gray-800">{$t('services', 'Services')}</span>
                 </h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-red-600 mx-auto mb-6"></div>
+                <div class="w-24 h-1 bg-gradient-to-r from-zinc-700 to-gray-800 mx-auto mb-6"></div>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                     {$t('professional_installations_description', 'Professional installations tailored to your needs with the highest industry standards')}
                 </p>
@@ -178,15 +178,15 @@
             <!-- Stats -->
             <div class="grid grid-cols-3 gap-8 mt-12 max-w-2xl mx-auto">
                 <div class="text-center">
-                    <div class="text-3xl font-bold text-red-600 mb-2">50+</div>
+                    <div class="text-3xl font-bold text-gray-800 mb-2">50+</div>
                     <div class="text-gray-600 font-medium">{$t('completed_projects', 'Completed Projects')}</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-3xl font-bold text-blue-600 mb-2">5+</div>
+                    <div class="text-3xl font-bold text-zinc-700 mb-2">5+</div>
                     <div class="text-gray-600 font-medium">{$t('years_experience', 'Years Experience')}</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-3xl font-bold text-red-600 mb-2">98%</div>
+                    <div class="text-3xl font-bold text-gray-800 mb-2">98%</div>
                     <div class="text-gray-600 font-medium">{$t('success_rate', 'Success Rate')}</div>
                 </div>
             </div>
@@ -207,7 +207,7 @@
                             <button
                                     class="group w-full text-left p-5 rounded-xl transition-all duration-300 border-2 {
                                     service.id === activeServiceId
-                                        ? `${service.color === 'red' ? 'border-red-600 bg-red-50' : 'border-blue-600 bg-blue-50'} shadow-lg`
+                                        ? `${service.color === 'steel' ? 'border-zinc-700 bg-zinc-50' : 'border-gray-800 bg-gray-50'} shadow-lg`
                                         : 'border-gray-200 bg-white hover:border-gray-300 hover:shadow-md'
                                 }"
                                     on:click={() => setActiveService(service, index)}
@@ -217,8 +217,8 @@
                                         <div class="flex items-center gap-4 mb-2">
                                             <div class="w-12 h-12 rounded-xl flex items-center justify-center {
                                                 service.id === activeServiceId
-                                                    ? `${service.color === 'red' ? 'bg-red-600 text-white' : 'bg-blue-600 text-white'}`
-                                                    : `${service.color === 'red' ? 'bg-red-100 text-red-600' : 'bg-blue-100 text-blue-600'} group-hover:bg-gray-100`
+                                                    ? `${service.color === 'steel' ? 'bg-zinc-700 text-white' : 'bg-gray-800 text-white'}`
+                                                    : `${service.color === 'steel' ? 'bg-zinc-100 text-zinc-700' : 'bg-gray-100 text-gray-800'} group-hover:bg-gray-100`
                                             }">
                                                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
@@ -228,7 +228,7 @@
                                                 <h4 class="font-bold text-gray-900 text-lg">{service.shortTitle}</h4>
                                                 <p class="text-sm font-medium {
                                                     service.id === activeServiceId
-                                                        ? `${service.color === 'red' ? 'text-red-600' : 'text-blue-600'}`
+                                                        ? `${service.color === 'steel' ? 'text-zinc-700' : 'text-gray-800'}`
                                                         : 'text-gray-500'
                                                 }">{service.category}</p>
                                             </div>
@@ -290,7 +290,7 @@
                                     </h3>
                                     <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
                                         <div class="w-2 h-2 rounded-full {
-                                            activeService.color === 'red' ? 'bg-red-400' : 'bg-blue-400'
+                                            activeService.color === 'steel' ? 'bg-zinc-400' : 'bg-gray-400'
                                         }"></div>
                                         <span class="text-sm font-medium">{$t('professional_installation', 'Professional Installation')}</span>
                                     </div>
@@ -316,10 +316,10 @@
                                     <div class="grid md:grid-cols-2 gap-4">
                                         <div class="flex items-start gap-3">
                                             <div class="w-6 h-6 rounded-full {
-                                                activeService.color === 'red' ? 'bg-red-100' : 'bg-blue-100'
+                                                activeService.color === 'steel' ? 'bg-zinc-100' : 'bg-gray-100'
                                             } flex items-center justify-center flex-shrink-0 mt-0.5">
                                                 <svg class="w-3 h-3 {
-                                                    activeService.color === 'red' ? 'text-red-600' : 'text-blue-600'
+                                                    activeService.color === 'steel' ? 'text-zinc-700' : 'text-gray-800'
                                                 }" fill="currentColor" viewBox="0 0 20 20">
                                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
                                                 </svg>
@@ -332,10 +332,10 @@
 
                                         <div class="flex items-start gap-3">
                                             <div class="w-6 h-6 rounded-full {
-                                                activeService.color === 'red' ? 'bg-red-100' : 'bg-blue-100'
+                                                activeService.color === 'steel' ? 'bg-zinc-100' : 'bg-gray-100'
                                             } flex items-center justify-center flex-shrink-0 mt-0.5">
                                                 <svg class="w-3 h-3 {
-                                                    activeService.color === 'red' ? 'text-red-600' : 'text-blue-600'
+                                                    activeService.color === 'steel' ? 'text-zinc-700' : 'text-gray-800'
                                                 }" fill="currentColor" viewBox="0 0 20 20">
                                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
                                                 </svg>
@@ -348,10 +348,10 @@
 
                                         <div class="flex items-start gap-3">
                                             <div class="w-6 h-6 rounded-full {
-                                                activeService.color === 'red' ? 'bg-red-100' : 'bg-blue-100'
+                                                activeService.color === 'steel' ? 'bg-zinc-100' : 'bg-gray-100'
                                             } flex items-center justify-center flex-shrink-0 mt-0.5">
                                                 <svg class="w-3 h-3 {
-                                                    activeService.color === 'red' ? 'text-red-600' : 'text-blue-600'
+                                                    activeService.color === 'steel' ? 'text-zinc-700' : 'text-gray-800'
                                                 }" fill="currentColor" viewBox="0 0 20 20">
                                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
                                                 </svg>
@@ -364,10 +364,10 @@
 
                                         <div class="flex items-start gap-3">
                                             <div class="w-6 h-6 rounded-full {
-                                                activeService.color === 'red' ? 'bg-red-100' : 'bg-blue-100'
+                                                activeService.color === 'steel' ? 'bg-zinc-100' : 'bg-gray-100'
                                             } flex items-center justify-center flex-shrink-0 mt-0.5">
                                                 <svg class="w-3 h-3 {
-                                                    activeService.color === 'red' ? 'text-red-600' : 'text-blue-600'
+                                                    activeService.color === 'steel' ? 'text-zinc-700' : 'text-gray-800'
                                                 }" fill="currentColor" viewBox="0 0 20 20">
                                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
                                                 </svg>
@@ -384,25 +384,25 @@
                                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                                     <div class="text-center p-4 bg-gray-50 rounded-xl">
                                         <div class="text-2xl font-bold {
-                                            activeService.color === 'red' ? 'text-red-600' : 'text-blue-600'
+                                            activeService.color === 'steel' ? 'text-zinc-700' : 'text-gray-800'
                                         } mb-2">24/7</div>
                                         <div class="text-sm text-gray-600 font-medium">{$t('support', 'Support')}</div>
                                     </div>
                                     <div class="text-center p-4 bg-gray-50 rounded-xl">
                                         <div class="text-2xl font-bold {
-                                            activeService.color === 'red' ? 'text-red-600' : 'text-blue-600'
+                                            activeService.color === 'steel' ? 'text-zinc-700' : 'text-gray-800'
                                         } mb-2">98%</div>
                                         <div class="text-sm text-gray-600 font-medium">{$t('success_rate', 'Success Rate')}</div>
                                     </div>
                                     <div class="text-center p-4 bg-gray-50 rounded-xl">
                                         <div class="text-2xl font-bold {
-                                            activeService.color === 'red' ? 'text-red-600' : 'text-blue-600'
+                                            activeService.color === 'steel' ? 'text-zinc-700' : 'text-gray-800'
                                         } mb-2">5★</div>
                                         <div class="text-sm text-gray-600 font-medium">{$t('rating', 'Rating')}</div>
                                     </div>
                                     <div class="text-center p-4 bg-gray-50 rounded-xl">
                                         <div class="text-2xl font-bold {
-                                            activeService.color === 'red' ? 'text-red-600' : 'text-blue-600'
+                                            activeService.color === 'steel' ? 'text-zinc-700' : 'text-gray-800'
                                         } mb-2">ISO</div>
                                         <div class="text-sm text-gray-600 font-medium">{$t('certified', 'Certified')}</div>
                                     </div>
@@ -420,7 +420,7 @@
                                                 <button
                                                         class="w-3 h-3 rounded-full transition-all duration-300 {
                                                         idx === activeIndex
-                                                            ? (activeService.color === 'red' ? 'bg-red-600 w-8' : 'bg-blue-600 w-8')
+                                                            ? (activeService.color === 'steel' ? 'bg-zinc-700 w-8' : 'bg-gray-800 w-8')
                                                             : 'bg-gray-300 hover:bg-gray-400'
                                                     }"
                                                         on:click={() => setActiveService(services[idx], idx)}

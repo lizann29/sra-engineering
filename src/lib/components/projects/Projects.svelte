@@ -10,14 +10,6 @@
     // Separate image arrays for each facility type
     const facilityImages = {
         'energy facility': [
-            '/images/energy-9.jpeg',
-            '/images/energy-20.jpeg',
-            '/images/energy-17.jpeg',
-            '/images/energy-12.jpeg',
-            '/images/energy-6.jpeg',
-            '/images/energy-4.jpeg'
-        ],
-        'structural works': [
             '/images/structural-work.jpeg',
             '/images/structural-work-1.jpeg',
             '/images/structural-work-2.jpeg',
@@ -32,7 +24,16 @@
             '/images/structural-work-11.jpeg',
             '/images/structural-work-14.jpeg',
             '/images/structural-work-15.jpeg',
-            '/images/stuctural-work-16.jpeg'
+            '/images/structural-work-16.jpeg'
+        ],
+        'structural works': [
+            '/images/energy-9.jpeg',
+            '/images/energy-20.jpeg',
+            '/images/energy-17.jpeg',
+            '/images/energy-12.jpeg',
+            '/images/energy-6.jpeg',
+            '/images/energy-4.jpeg'
+
         ]
     };
 

@@ -11,7 +11,7 @@
         services: $t('services', 'Services'),
         projects: $t('projects', 'Projects'),
         aboutCompany: $t('about_company', 'About Company'),
-        partners: $t('partners', 'Partners'),
+        advantages: $t('advantages', 'Advantages'),
         contacts: $t('contacts', 'Contacts')
     });
 
@@ -19,7 +19,7 @@
         { title: navTitles.services, path: `/` },
         { title: navTitles.projects, path: `/projects` },
         { title: navTitles.aboutCompany, path: `/` },
-        { title: navTitles.partners, path: `/` },
+        { title: navTitles.advantages, path: `/` },
         { title: navTitles.contacts, path: `/` }
     ]);
 

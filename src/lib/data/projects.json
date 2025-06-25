@@ -2,421 +2,379 @@
   {
     "id": 1,
     "name": "Sambo Sports Complex",
-    "nameEn": "Sambo Sports Complex",
     "company": "Georgian Sambo Federation",
     "location": "Tbilisi",
-    "contractDate": "",
-    "completionDate": "",
-    "image": "/images/sambo.png"
+    "contractDate": "01/05/25",
+    "completionDate": "01/05/26",
+    "facilityType": "structural works"
   },
   {
-    "id": 22,
+    "id": 2,
     "name": "VR Krtsanisi Resort Residence",
-    "nameEn": "VR Krtsanisi Resort Residencer",
     "company": "VR Holding",
     "location": "Tbilisi",
-    "contractDate": "",
-    "completionDate": "",
-    "image": "/images/vr.png"
+    "contractDate": "01/09/24",
+    "completionDate": "01/09/26",
+    "facilityType": "structural works"
   },
   {
     "id": 3,
-    "name": "YAKUPLU TRAFO MERKEZİ",
-    "nameEn": "Yakuplu Transformer Center",
+    "name": "Yakuplu Trafo Center",
     "company": "BEST İNŞAAT TAAHHÜT A.Ş.",
     "location": "İSTANBUL",
     "contractDate": "1/3/19",
     "completionDate": "10/11/19",
-    "image": "/images/project3.jpeg"
+    "facilityType": "energy facility"
   },
   {
     "id": 4,
-    "name": "SELÇUK TRAFO MERKEZİ",
-    "nameEn": "Selçuk Transformer Center",
+    "name": "Selçuk Trafo Center",
     "company": "BEST İNŞAAT TAAHHÜT A.Ş.",
     "location": "İZMİR",
     "contractDate": "1/1/20",
     "completionDate": "30/6/20",
-    "image": "/images/project4.jpeg"
+    "facilityType": "energy facility"
   },
   {
     "id": 5,
-    "name": "BERGAMA TRAFO MERKEZİ",
-    "nameEn": "Bergama Transformer Center",
+    "name": "Bergama Trafo Center",
     "company": "BEST İNŞAAT TAAHHÜT A.Ş.",
     "location": "İZMİR",
     "contractDate": "1/1/20",
     "completionDate": "30/6/20",
-    "image": "/images/project5.jpeg"
+    "facilityType": "energy facility"
   },
   {
     "id": 6,
-    "name": "VİZE TRAFO MERKEZİ",
-    "nameEn": "Vize Transformer Center",
+    "name": "Vize Trafo Center",
     "company": "GES ELEKTRİK TAAHHÜT A.Ş.",
     "location": "KIRKLARELİ",
     "contractDate": "1/4/30",
     "completionDate": "1/11/20",
-    "image": "/images/project6.jpeg"
+    "facilityType": "energy facility"
   },
   {
     "id": 7,
-    "name": "RAFİNERİ TRAFO MERKEZİ",
-    "nameEn": "Refinery Transformer Center",
+    "name": "Refinery Trafo Center",
     "company": "GES ELEKTRİK TAAHHÜT A.Ş.",
     "location": "İZMİR",
     "contractDate": "4/3/20",
     "completionDate": "1/11/20",
-    "image": "/images/project1.jpeg"
+    "facilityType": "energy facility"
   },
   {
     "id": 8,
-    "name": "KARLITEPELİ AYANÇERİ TRAFO MERKEZİ",
-    "nameEn": "Karlitepeli Ayançeri Transformer Center",
+    "name": "Karlitepeli Ayançeri Trafo Center",
     "company": "KARASİ ELEKTRİK TAAHHÜT A.Ş.",
     "location": "KAHRAMANMARAŞ",
     "contractDate": "1/5/20",
     "completionDate": "30/9/20",
-    "image": "/images/project2.jpeg"
+    "facilityType": "energy facility"
   },
   {
     "id": 9,
-    "name": "KARLİTEPE TRAFO MERKEZİ",
-    "nameEn": "Karlitepe Transformer Center",
+    "name": "Karlitepe Trafo Center",
     "company": "KARASİ ELEKTRİK TAAHHÜT A.Ş.",
     "location": "HATAY",
     "contractDate": "1/6/20",
     "completionDate": "20/10/20",
-    "image": "/images/project3.jpeg"
+    "facilityType": "energy facility"
   },
   {
     "id": 10,
-    "name": "AFRIN TRAFO MERKEZİ",
-    "nameEn": "Afrin Transformer Center",
+    "name": "Afrin Trafo Center",
     "company": "BEST İNŞAAT TAAHHÜT A.Ş.",
     "location": "SURİYE",
     "contractDate": "1/9/20",
     "completionDate": "20/10/20",
-    "image": "/images/project4.jpeg"
+    "facilityType": "energy facility"
   },
   {
     "id": 11,
-    "name": "TENDE ELEKTRONİK FABRİKASI",
-    "nameEn": "Tende Electronics Factory",
+    "name": "Tende Electronics Factory",
     "company": "TENDE ELEKTRONİK LTD. ŞTİ.",
     "location": "ANKARA",
     "contractDate": "1/3/21",
     "completionDate": "12/12/21",
-    "image": "/images/project5.jpeg"
+    "facilityType": "structural works"
   },
   {
     "id": 12,
-    "name": "ÜLKER DEPO BİNASI",
-    "nameEn": "Ülker Warehouse Building",
+    "name": "Ülker Warehouse Building",
     "company": "ÜLKER A.Ş.",
     "location": "DÜZCE",
     "contractDate": "1/1/21",
     "completionDate": "5/5/21",
-    "image": "/images/project6.jpeg"
+    "facilityType": "structural works"
   },
   {
     "id": 13,
-    "name": "TÜRK ECZACILAR BİRLİĞİ BİNASI",
-    "nameEn": "Turkish Pharmacists Association Building",
+    "name": "Turkish Pharmacists Association Building",
     "company": "SABKAR İNŞAAT LTD.ŞTİ.",
     "location": "ANKARA",
     "contractDate": "1/5/21",
     "completionDate": "10/10/21",
-    "image": "/images/project1.jpeg"
+    "facilityType": "structural works"
   },
   {
     "id": 14,
-    "name": "GAFFARO OTEL",
-    "nameEn": "Gaffaro Hotel",
+    "name": "Gaffaro Hotel",
     "company": "AHMET AK GİDA LTD.ŞTİ",
     "location": "GİRESUN",
     "contractDate": "10/2/21",
     "completionDate": "30/12/21",
-    "image": "/images/project2.jpeg"
+    "facilityType": "structural works"
   },
   {
     "id": 15,
-    "name": "GAFFARO FINDIK FABRİKASI",
-    "nameEn": "Gaffaro Hazelnut Factory",
+    "name": "Gaffaro Hazelnut Factory",
     "company": "AHMET AK GİDA LTD.ŞTİ",
     "location": "GİRESUN",
     "contractDate": "10/2/21",
     "completionDate": "30/12/21",
-    "image": "/images/project3.jpeg"
+    "facilityType": "structural works"
   },
   {
     "id": 16,
-    "name": "TEKKEKÖY TRAFO MERKEZİ",
-    "nameEn": "Tekkeköy Transformer Center",
+    "name": "Tekkeköy Trafo Center",
     "company": "TELLİ OGULLARI ELEKTRİK TAAHHÜT A.Ş.",
     "location": "SAMSUN",
     "contractDate": "10/2/22",
     "completionDate": "13/5/22",
-    "image": "/images/project4.jpeg"
+    "facilityType": "energy facility"
   },
   {
     "id": 17,
-    "name": "ÖKŞÜT ALTIN MADENİ TRAFO MERKEZİ",
-    "nameEn": "Ökşüt Gold Mine Transformer Center",
+    "name": "Ökşüt Gold Mine Trafo Center",
     "company": "BEST İNŞAAT TAAHHÜT A.Ş.",
     "location": "KAYSERİ",
     "contractDate": "1/1/22",
     "completionDate": "30/6/22",
-    "image": "/images/project5.jpeg"
+    "facilityType": "energy facility"
   },
   {
     "id": 18,
-    "name": "GÖKSU TRAFO MERKEZİ",
-    "nameEn": "Göksu Transformer Center",
+    "name": "Göksu Trafo Center",
     "company": "BEST İNŞAAT TAAHHÜT A.Ş.",
     "location": "ANTALYA",
     "contractDate": "1/1/22",
     "completionDate": "30/12/22",
-    "image": "/images/project6.jpeg"
+    "facilityType": "energy facility"
   },
   {
     "id": 19,
-    "name": "ASYA TRAFİK BİNASI",
-    "nameEn": "Asia Traffic Building",
+    "name": "Asia Traffic Building",
     "company": "ODAK ARGE A.Ş.",
     "location": "ANKARA",
     "contractDate": "1/4/22",
     "completionDate": "30/10/22",
-    "image": "/images/project1.jpeg"
+    "facilityType": "structural works"
   },
   {
     "id": 20,
-    "name": "URGUP TRAFO MERKEZİ",
-    "nameEn": "Urgup Transformer Center",
+    "name": "Urgup Trafo Center",
     "company": "BEST İNŞAAT TAAHHÜT A.Ş.",
     "location": "NEVŞEHİR",
     "contractDate": "1/2/22",
     "completionDate": "30/9/22",
-    "image": "/images/project2.jpeg"
+    "facilityType": "energy facility"
   },
   {
     "id": 21,
-    "name": "MİHMANDAR TRAFO MERKEZİ",
-    "nameEn": "Mihmandar Transformer Center",
+    "name": "Mihmandar Trafo Center",
     "company": "BEST İNŞAAT TAAHHÜT A.Ş.",
     "location": "ADANA",
     "contractDate": "1/1/22",
     "completionDate": "30/6/22",
-    "image": "/images/project3.jpeg"
+    "facilityType": "energy facility"
   },
   {
     "id": 22,
-    "name": "1915 ÇANAKKALE KÖPRÜSÜ ANA KONTROL BİNASI",
-    "nameEn": "1915 Çanakkale Bridge Main Control Building",
+    "name": "1915 Çanakkale Bridge Main Control Building",
     "company": "KLV İNŞAAT LTD.ŞTİ",
     "location": "ÇANAKKALE",
     "contractDate": "12/3/22",
     "completionDate": "30/12/22",
-    "image": "/images/project4.jpeg"
+    "facilityType": "structural works"
   },
   {
     "id": 23,
-    "name": "TEKGİDAŞ SENDİKASI",
-    "nameEn": "Tekgıdaş Union",
+    "name": "Tekgıdaş Union",
     "company": "CİHAN İNŞAAT LTD. ŞTİ",
     "location": "ESKİŞEHİR",
     "contractDate": "1/1/22",
     "completionDate": "30/12/22",
-    "image": "/images/project5.jpeg"
+    "facilityType": "structural works"
   },
   {
     "id": 24,
-    "name": "KOCAELİ ŞEHİR HASTANESİ",
-    "nameEn": "Kocaeli City Hospital",
+    "name": "Kocaeli City Hospital",
     "company": "GAMA-TÜRKERLER İŞ ORTAKLIĞI",
     "location": "KOCAELİ",
     "contractDate": "1/1/22",
     "completionDate": "30/12/22",
-    "image": "/images/project6.jpeg"
+    "facilityType": "structural works"
   },
   {
     "id": 25,
-    "name": "TOSYALI DEMİR ÇELİK FABRİKASI TRAFO MERKEZİ",
-    "nameEn": "Tosyalı Iron Steel Factory Transformer Center",
+    "name": "Tosyalı Iron Steel Factory Trafo Center",
     "company": "BEST İNŞAAT TAAHHÜT A.Ş.",
     "location": "CEZAYİR/ORAN",
     "contractDate": "1/6/23",
     "completionDate": "30/1/23",
-    "image": "/images/project1.jpeg"
+    "facilityType": "energy facility"
   },
   {
     "id": 26,
-    "name": "ÖNDER SAVUNMA FABRİKA BİNASI",
-    "nameEn": "Önder Defense Factory Building",
+    "name": "Önder Defense Factory Building",
     "company": "ÖNDER SAVUNMA A.Ş.",
     "location": "ANKARA",
     "contractDate": "1/1/23",
     "completionDate": "30/12/23",
-    "image": "/images/project2.jpeg"
+    "facilityType": "structural works"
   },
   {
     "id": 27,
-    "name": "ÖNDER SAVUNMA OFİS BİNASI",
-    "nameEn": "Önder Defense Office Building",
+    "name": "Önder Defense Office Building",
     "company": "ÖNDER SAVUNMA A.Ş.",
     "location": "ANKARA",
     "contractDate": "1/1/23",
     "completionDate": "30/12/23",
-    "image": "/images/project3.jpeg"
+    "facilityType": "structural works"
   },
   {
     "id": 28,
-    "name": "GÖLKÖY KES TRAFO MERKEZİ",
-    "nameEn": "Gölköy Kes Transformer Center",
+    "name": "Gölköy Kes Trafo Center",
     "company": "BEST İNŞAAT TAAHHÜT A.Ş.",
     "location": "ANKARA",
     "contractDate": "12/4/23",
     "completionDate": "20/2/24",
-    "image": "/images/project4.jpeg"
+    "facilityType": "energy facility"
   },
   {
     "id": 29,
-    "name": "TOSB TRAFOMERKEZİ",
-    "nameEn": "TOSB Transformer Center",
+    "name": "TOSB Trafo Center",
     "company": "BEST İNŞAAT TAAHHÜT A.Ş.",
     "location": "İSTANBUL",
     "contractDate": "1/6/23",
     "completionDate": "30/12/23",
-    "image": "/images/project5.jpeg"
+    "facilityType": "energy facility"
   },
   {
     "id": 30,
-    "name": "DALAMAN HÜKÜMET KONAĞI",
-    "nameEn": "Dalaman Government Building",
+    "name": "Dalaman Government Building",
     "company": "BRG-MİRZAN İNŞAAT LTD.ŞTİ",
     "location": "MUĞLA",
     "contractDate": "1/10/23",
     "completionDate": "30/12/24",
-    "image": "/images/project6.jpeg"
+    "facilityType": "structural works"
   },
   {
     "id": 31,
-    "name": "DEHUT JANDARMA KARAKOLU",
-    "nameEn": "Dehut Gendarmerie Station",
+    "name": "Dehut Gendarmerie Station",
     "company": "BRG-MİRZAN İNŞAAT LTD.ŞTİ",
     "location": "OSMANİYE",
     "contractDate": "1/6/24",
     "completionDate": "30/12/24",
-    "image": "/images/project1.jpeg"
+    "facilityType": "structural works"
   },
   {
     "id": 32,
-    "name": "MAKİNE KİMYA ENSTİTÜSÜ RADAR SOĞUTUCU BİNASI",
-    "nameEn": "Mechanical Chemistry Institute Radar Cooling Building",
+    "name": "Mechanical Chemistry Institute Radar Cooling Building",
     "company": "BİLAL USTABAŞ İNŞAAT LTD.ŞTİ.",
     "location": "ANKARA",
     "contractDate": "1/5/24",
     "completionDate": "30/8/24",
-    "image": "/images/project2.jpeg"
+    "facilityType": "structural works"
   },
   {
     "id": 33,
-    "name": "HAVELSAN C 130 BİNASI",
-    "nameEn": "Havelsan C 130 Building",
+    "name": "Havelsan C 130 Building",
     "company": "ASİL İNŞAAT A.Ş.",
     "location": "KAYSERİ",
     "contractDate": "12/2/24",
     "completionDate": "30/9/24",
-    "image": "/images/project3.jpeg"
+    "facilityType": "structural works"
   },
   {
     "id": 34,
-    "name": "DKA GRUP OFİS BİNASI",
-    "nameEn": "DKA Group Office Building",
+    "name": "DKA Group Office Building",
     "company": "PRODA MÜHENDİSLİK LTD. ŞTİ",
     "location": "ANKARA",
     "contractDate": "1/7/24",
     "completionDate": "30/9/24",
-    "image": "/images/project4.jpeg"
+    "facilityType": "structural works"
   },
   {
     "id": 35,
-    "name": "HANKAR İNŞAAT OFİS BİNASI",
-    "nameEn": "Hankar Construction Office Building",
+    "name": "Hankar Construction Office Building",
     "company": "PRODA MÜHENDİSLİK LTD. ŞTİ",
     "location": "ANKARA",
     "contractDate": "30/8/24",
     "completionDate": "30/12/24",
-    "image": "/images/project5.jpeg"
+    "facilityType": "structural works"
   },
   {
     "id": 36,
-    "name": "İNCEK VİLLA",
-    "nameEn": "İncek Villa",
+    "name": "İncek Villa",
     "company": "NKY MİMARLIK LTD.ŞTİ",
     "location": "ANKARA",
     "contractDate": "1/3/24",
     "completionDate": "30/9/24",
-    "image": "/images/project6.jpeg"
+    "facilityType": "structural works"
   },
   {
     "id": 37,
-    "name": "DERİ OSB TRAFO MERKEZİ",
-    "nameEn": "Leather OSB Transformer Center",
+    "name": "Leather OSB Trafo Center",
     "company": "BEST İNŞAAT TAAHHÜT A.Ş.",
     "location": "ANKARA",
     "contractDate": "30/9/23",
     "completionDate": "30/10/24",
-    "image": "/images/project1.jpeg"
+    "facilityType": "energy facility"
   },
   {
     "id": 38,
-    "name": "MALLİHAN TRAFO MERKEZİ",
-    "nameEn": "Mallihan Transformer Center",
+    "name": "Mallihan Trafo Center",
     "company": "BEST İNŞAAT TAAHHÜT A.Ş.",
     "location": "ANKARA",
     "contractDate": "30/9/24",
     "completionDate": "30/6/25",
-    "image": "/images/project2.jpeg"
+    "facilityType": "energy facility"
   },
   {
     "id": 39,
-    "name": "KİRAZ TRAFO MERKEZİ",
-    "nameEn": "Kiraz Transformer Center",
+    "name": "Kiraz Trafo Center",
     "company": "BEST İNŞAAT TAAHHÜT A.Ş.",
     "location": "İZMİR",
     "contractDate": "30/9/24",
     "completionDate": "30/6/25",
-    "image": "/images/project3.jpeg"
+    "facilityType": "energy facility"
   },
   {
     "id": 40,
-    "name": "ALTINKAYA TRAFOMERKEZİ",
-    "nameEn": "Altınkaya Transformer Center",
+    "name": "Altınkaya Trafo Center",
     "company": "BEST İNŞAAT TAAHHÜT A.Ş.",
     "location": "SAMSUN",
     "contractDate": "30/9/24",
     "completionDate": "30/6/25",
-    "image": "/images/project4.jpeg"
+    "facilityType": "energy facility"
   },
   {
     "id": 41,
-    "name": "BORNOVA TRAFO MERKEZİ",
-    "nameEn": "Bornova Transformer Center",
+    "name": "Bornova Trafo Center",
     "company": "BEST İNŞAAT TAAHHÜT A.Ş.",
     "location": "İZMİR",
     "contractDate": "21/1/19",
     "completionDate": "30/6/19",
-    "image": "/images/project1.jpeg"
+    "facilityType": "energy facility"
   },
   {
     "id": 42,
-    "name": "ATİŞ ALANI TRFO MERKEZİ",
-    "nameEn": "Firing Range Transformer Center",
+    "name": "Firing Range Trafo Center",
     "company": "BEST İNŞAAT TAAHHÜT A.Ş.",
     "location": "İSTANBUL",
     "contractDate": "25/4/19",
     "completionDate": "20/10/19",
-    "image": "/images/project2.jpeg"
+    "facilityType": "energy facility"
   }
 ]

@@ -2,6 +2,7 @@
 <script lang="ts">
     import { base } from '$app/paths';
     import { fly } from 'svelte/transition';
+    import { t } from '$lib/stores/translations.js';
     import ProjectModal from './ProjectModal.svelte';
 
     // Import your projects data
@@ -107,8 +108,11 @@
 
     // Modal functions
     function openModal(project) {
-        selectedProject = project;
-        isModalOpen = true;
+        // Only open modal for Sambo (ID 1) and VR Krtsanisi (ID 2)
+        if (project.id === 1 || project.id === 2) {
+            selectedProject = project;
+            isModalOpen = true;
+        }
     }
 
     function closeModal() {
@@ -145,13 +149,13 @@
             </div>
 
             <h1 class="text-5xl md:text-7xl font-black text-white mb-6 tracking-wide">
-                OUR PROJECTS
+                {$t('our_projects', 'OUR PROJECTS')}
             </h1>
 
             <div class="flex items-center justify-center space-x-6 mb-8">
                 <div class="h-1 w-20 bg-gradient-to-r from-red-950 to-blue-950 rounded-full"></div>
                 <h2 class="text-xl md:text-2xl font-bold text-white/80 tracking-widest uppercase">
-                    SRA Engineering
+                    {$t('sra_engineering', 'SRA Engineering')}
                 </h2>
                 <div class="h-1 w-20 bg-gradient-to-r from-red-950 to-blue-950 rounded-full"></div>
             </div>
@@ -177,7 +181,7 @@
                                 <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95 0 5.52 4.47 10 9.99 10 3.31 0 6.24-1.61 8.06-4.09l-2.6-1.53C16.17 17.98 14.21 19 12 19z"/>
                                 </svg>
-                                <span class="font-black text-xl">ENERGY FACILITY</span>
+                                <span class="font-black text-xl">{$t('energy_facility', 'ENERGY FACILITY')}</span>
                             </div>
                             <span class="px-4 py-2 bg-white/20 rounded-full text-sm font-bold">
                                 {energyCount}
@@ -198,7 +202,7 @@
                                 <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z"/>
                                 </svg>
-                                <span class="font-black text-xl">STRUCTURAL WORKS</span>
+                                <span class="font-black text-xl">{$t('structural_works', 'STRUCTURAL WORKS')}</span>
                             </div>
                             <span class="px-4 py-2 bg-white/20 rounded-full text-sm font-bold">
                                 {structuralCount}
@@ -225,7 +229,7 @@
                              in:fly={{ x: 300, duration: 700 }}>
                             <img
                                     src={getImagePath(imagePath)}
-                                    alt="Project Image {index + 1}"
+                                    alt="{$t('project_image', 'Project Image')} {index + 1}"
                                     class="w-full h-full object-cover"
                                     loading="lazy"
                             />
@@ -239,7 +243,8 @@
                     <!-- Navigation Arrows -->
                     <button
                             onclick={prevSlide}
-                            class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 hover:scale-110">
+                            class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
+                            aria-label="{$t('previous_image', 'Previous Image')}">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                         </svg>
@@ -247,7 +252,8 @@
 
                     <button
                             onclick={nextSlide}
-                            class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 hover:scale-110">
+                            class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
+                            aria-label="{$t('next_image', 'Next Image')}">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                         </svg>
@@ -259,6 +265,7 @@
                             <button
                                     onclick={() => goToSlide(index)}
                                     class="w-3 h-3 rounded-full transition-all duration-300 {index === currentSlideIndex ? 'bg-white' : 'bg-white/40 hover:bg-white/60'}"
+                                    aria-label="{$t('go_to_slide', 'Go to slide')} {index + 1}"
                             ></button>
                         {/each}
                     </div>
@@ -268,13 +275,18 @@
             <!-- Projects List Below Slideshow -->
             <div class="bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 p-8">
                 <h2 class="text-3xl font-black text-white mb-8 text-center uppercase tracking-wide">
-                    {selectedFacilityType === 'energy facility' ? 'Energy Facility Projects' : 'Structural Works Projects'}
+                    {selectedFacilityType === 'energy facility'
+                        ? $t('energy_facility_projects', 'Energy Facility Projects')
+                        : $t('structural_works_projects', 'Structural Works Projects')}
                 </h2>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {#each filteredProjects as project, index}
                         <div class="bg-white/5 rounded-2xl border border-white/10 p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer transform hover:scale-105"
-                             onclick={() => openModal(project)}>
+                             onclick={() => openModal(project)}
+                             role="button"
+                             tabindex="0"
+                             aria-label="{$t('view_project_details', 'View project details')}: {project.name}">
 
                             <h3 class="text-lg font-bold text-white mb-3 line-clamp-2">
                                 {project.name}
@@ -307,11 +319,11 @@
                             <div class="mt-4">
                                 {#if getProjectStatus(project.completionDate) === 'completed'}
                                     <span class="px-3 py-1 bg-green-600/20 text-green-400 text-xs font-bold rounded-full border border-green-500/30">
-                                        COMPLETED
+                                        {$t('completed', 'COMPLETED')}
                                     </span>
                                 {:else}
                                     <span class="px-3 py-1 bg-green-50 text-red-600 text-xs font-bold rounded-full border border-red-500/30">
-                                        ONGOING
+                                        {$t('ongoing', 'ONGOING')}
                                     </span>
                                 {/if}
                             </div>

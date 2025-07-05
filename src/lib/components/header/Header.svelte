@@ -11,7 +11,7 @@
         services: $t('services', 'Services'),
         projects: $t('projects', 'Projects'),
         aboutCompany: $t('about_company', 'About Company'),
-        advantages: $t('advantages', 'Advantages'),
+        advantages: $t('ADVANTAGES', 'Advantages'),
         contacts: $t('contacts', 'Contacts')
     });
 

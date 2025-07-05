@@ -54,7 +54,7 @@
             title: serviceTranslations.plumbing_title,
             shortTitle: serviceTranslations.plumbing_short,
             description: serviceTranslations.plumbing_desc,
-            image: `${base}/images/plumbing.jpg`,
+            image: `${base}/images/pumbingnew.jpeg`,
             category: serviceTranslations.infrastructure,
             color: 'charcoal'
         },
@@ -167,7 +167,7 @@
                     {$t('professional_solutions', 'Professional Solutions')}
                 </span>
                 <h2 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                    {$t('our', 'Our')} <span class="text-gray-800">{$t('services', 'Services')}</span>
+                    {$t('our_services', 'Our Services')}
                 </h2>
                 <div class="w-24 h-1 bg-gradient-to-r from-zinc-700 to-gray-800 mx-auto mb-6"></div>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">

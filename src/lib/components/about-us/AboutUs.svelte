@@ -82,7 +82,9 @@
                      class:opacity-0={!isVisible}>
                     <div class="relative mb-2">
                         <span class="inline-block h-1 w-12 bg-red-950 mb-2"></span>
-                        <h2 class="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">{$t('our', 'Our')} <span class="text-blue-100">{$t('vision', 'Vision')}</span></h2>
+                        <h2 class="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">
+                            {$t('our_vision', 'Our Vision')}
+                        </h2>
                     </div>
                     <p class="text-xl leading-relaxed tracking-wide text-neutral-300 font-light">
                         {$t('vision_description', 'To become a leading and preferred company in mechanical and electrical installations for buildings by delivering')} <span class="font-semibold text-stone-100">{$t('innovative_sustainable_reliable', 'innovative, sustainable, and reliable')}</span> {$t('solutions', 'solutions')}.
@@ -102,7 +104,9 @@
                      class:opacity-0={!isVisible}>
                     <div class="relative mb-2">
                         <span class="inline-block h-1 w-12 bg-blue-950 mb-2"></span>
-                        <h2 class="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">{$t('our', 'Our')} <span class="text-pink-100">{$t('mission', 'Mission')}</span></h2>
+                        <h2 class="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">
+                            {$t('our_mission', 'Our Mission')}
+                        </h2>
                     </div>
                     <p class="text-xl leading-relaxed tracking-wide text-neutral-300 font-light">
                         {$t('mission_description', 'To design and implement high-quality, safe, and environmentally responsible')} <span class="font-semibold text-stone-100">{$t('mechanical_and_electrical', 'mechanical and electrical')}</span>

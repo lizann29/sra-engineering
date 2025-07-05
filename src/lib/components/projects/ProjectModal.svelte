@@ -3,16 +3,16 @@
     import { base } from '$app/paths';
     import { fade, fly } from 'svelte/transition';
     import { createEventDispatcher } from 'svelte';
+    import { t } from '$lib/stores/translations.js';
 
     interface Project {
         id: number;
         name: string;
-        nameEn: string;
         company: string;
         location: string;
         contractDate: string;
         completionDate: string;
-        image: string;
+        facilityType: string;
     }
 
     interface Props {
@@ -35,8 +35,13 @@
         return projectDate > cutoffDate ? 'in-progress' : 'completed';
     }
 
-    function getImagePath(imagePath: string) {
-        return `${base}${imagePath}`;
+    function getImagePath(projectId: number) {
+        // Define specific images for each project
+        const projectImages = {
+            1: '/images/sambo.png', // Sambo Sports Complex
+            2: '/images/newkrtsanisi.jpeg' // VR Krtsanisi Resort Residence
+        };
+        return `${base}${projectImages[projectId] || '/images/default-project.jpg'}`;
     }
 
     // Handle click outside to close
@@ -73,14 +78,14 @@
             <!-- Modal Header -->
             <div class="relative">
                 <img
-                        src={getImagePath(project.image)}
-                        alt={project.nameEn}
+                        src={getImagePath(project.id)}
+                        alt={project.name}
                         class="w-full h-64 object-cover rounded-t-2xl"
                 />
                 <button
                         on:click={closeModal}
                         class="absolute top-4 right-4 w-10 h-10 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors"
-                        aria-label="Close modal"
+                        aria-label={$t('close_modal', 'Close modal')}
                 >
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
@@ -90,11 +95,11 @@
                 <div class="absolute top-4 left-4">
                     {#if getProjectStatus(project.completionDate) === 'completed'}
                         <span class="px-3 py-1 bg-green-500/80 backdrop-blur-sm text-white text-sm font-medium rounded-full">
-                            Completed
+                            {$t('completed', 'Completed')}
                         </span>
                     {:else}
                         <span class="px-3 py-1 bg-yellow-500/80 backdrop-blur-sm text-white text-sm font-medium rounded-full">
-                            In Progress
+                            {$t('in_progress', 'In Progress')}
                         </span>
                     {/if}
                 </div>
@@ -102,31 +107,28 @@
 
             <!-- Modal Content -->
             <div class="p-8">
-                <h2 id="modal-title" class="text-2xl font-bold text-white mb-2">
-                    {project.nameEn}
-                </h2>
-                <h3 class="text-lg text-white/80 mb-6">
+                <h2 id="modal-title" class="text-2xl font-bold text-white mb-6">
                     {project.name}
-                </h3>
+                </h2>
 
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="space-y-4">
                         <div>
-                            <h4 class="text-white/80 text-sm font-medium mb-1">Company</h4>
+                            <h4 class="text-white/80 text-sm font-medium mb-1">{$t('company', 'Company')}</h4>
                             <p class="text-white">{project.company}</p>
                         </div>
                         <div>
-                            <h4 class="text-white/80 text-sm font-medium mb-1">Location</h4>
+                            <h4 class="text-white/80 text-sm font-medium mb-1">{$t('location', 'Location')}</h4>
                             <p class="text-white">{project.location}</p>
                         </div>
                     </div>
                     <div class="space-y-4">
                         <div>
-                            <h4 class="text-white/80 text-sm font-medium mb-1">Contract Date</h4>
+                            <h4 class="text-white/80 text-sm font-medium mb-1">{$t('contract_date', 'Contract Date')}</h4>
                             <p class="text-white">{project.contractDate}</p>
                         </div>
                         <div>
-                            <h4 class="text-white/80 text-sm font-medium mb-1">Completion Date</h4>
+                            <h4 class="text-white/80 text-sm font-medium mb-1">{$t('completion_date', 'Completion Date')}</h4>
                             <p class="text-white">{project.completionDate}</p>
                         </div>
                     </div>

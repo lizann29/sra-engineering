@@ -16,20 +16,53 @@
     let { children, data }: Props = $props();
     let isLoading = $state(true);
 
-    onMount(async () => {
-        // Initialize translations
-        const storedLang = getStoredLanguage();
-        const langFromCookie = data?.lang || storedLang;
-        await initTranslations(langFromCookie);
+    async function waitForResources() {
+        if (document.readyState !== 'complete') {
+            await new Promise(resolve => {
+                if (document.readyState === 'complete') {
+                    resolve(void 0);
+                } else {
+                    window.addEventListener('load', () => resolve(void 0), { once: true });
+                }
+            });
+        }
 
-        // Wait for DOM to be fully loaded and rendered
-        setTimeout(() => {
+        // Wait for images to load
+        const images = document.querySelectorAll('img');
+        const imagePromises = Array.from(images).map(img => {
+            if (img.complete) return Promise.resolve();
+            return new Promise(resolve => {
+                img.onload = img.onerror = () => resolve(void 0);
+            });
+        });
+
+        await Promise.all(imagePromises);
+
+        // Wait for fonts to load (if using web fonts)
+        if (document.fonts) {
+            await document.fonts.ready;
+        }
+
+        // Minimum loading time to prevent flash
+        await new Promise(resolve => setTimeout(resolve, 800));
+    }
+
+    onMount(async () => {
+        try {
+            // Initialize translations
+            const storedLang = getStoredLanguage();
+            const langFromCookie = data?.lang || storedLang;
+            await initTranslations(langFromCookie);
+
+            // Wait for all resources to load
+            await waitForResources();
+        } catch (error) {
+            console.error('Loading error:', error);
+        } finally {
             isLoading = false;
-        }, 2000);
+        }
     });
 </script>
-
-<!-- Rest of your layout stays the same -->
 
 <Meta/>
 
